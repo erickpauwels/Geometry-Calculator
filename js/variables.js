@@ -16,3 +16,8 @@ const radioValue = document.getElementById("radio");
 //Forms
 const formIsosceles = document.getElementById("isosceles");
 const triangleForm = document.getElementById("triangleForm");
+//Results
+const squareResult = document.getElementById("squareResult");
+const triangleResult = document.getElementById("triangleResult");
+const isoscelesResult = document.getElementById("isoscelesResult");
+const circleResult = document.getElementById("circleResult");
