@@ -14,6 +14,20 @@ const calculateSquareArea = ()=> {
 
 /*------------ Triangulo------------ */ 
 
+formIsosceles.style.display = "none";
+
+//Checkbox
+
+function isosceles() {
+    if(checkbox.checked){
+        formIsosceles.style.display = "block";
+        triangleForm.style.display = "none";
+    }else {
+            triangleForm.style.display = "block";
+            formIsosceles.style.display = "none";
+        }
+}
+
 //Perimeter
 const trianglePerimeter = () => {
     let base = Number(triangleBase.value);
@@ -65,7 +79,16 @@ const isoscelesPerimeter = () => {
 }
 
 //Area
-
+function isoscelesArea() {
+    let base = Number(baseIsosceles.value);
+    let height = Number(triangleHeight.value);
+    if (height == false || base == false) {
+        console.log(`Falta un dato`);
+    }else {   
+        const triangleArea = (base, height)=>(base * height)/2;
+        console.log(`Area del Triangulo ${triangleArea(base, height)} cm2`);
+    }  
+}
 
 /*---------------- Circulo-------------------------------- */
 
