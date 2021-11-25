@@ -22,11 +22,7 @@
         </section>
         <section id="triangle">
             <h2>Triangle</h2>
-            <label for="triangles_options">Choose another type of Triangle</label>
-            <select name="triangle" id="triangle_type">
-                <option value=""></option>
-                <option value="isosceles">Isosceles</option>
-            </select>
+            <input type="checkbox">Isosceles
             <form id="triangleForm">
                 <label for="triangleSide1">Side A</label>
                 <input id="triangleSide1" type="number" required>
@@ -34,24 +30,25 @@
                 <input id="triangleSide2" type="number" required>
                 <label for="triangleBase">Base</label>
                 <input id="triangleBase" type="number" required>
-                <p>Do you know the height of your triangle?</p>
-                <button type="button" onclick="heightCalculator()">Get Height</button>
-                <label for="triangleHeight">Height</label>
-                <input id="triangleHeight" type="number">
+                <label for="normalHeight">Height</label>
+                <input id="normalHeight" type="number" required>
                 <button type="button" onclick="trianglePerimeter()">Get Perimeter</button>
                 <button type="button" onclick="calculateTriangleArea()">Get Area</button>
                 <button type="reset">Reset</button>
             </form>
-            <form>
+            <form id="isosceles">
                 <h3>Isosceles Triangle</h3>
-                <label for="triangleSide1">Side A</label>
-                <input id="triangleSide1" type="number">
-                <label for="triangleSide2">Side B</label>
-                <input id="triangleSide2" type="number">
-                <label for="triangleBase">Base</label>
-                <input id="triangleBaseiso" type="number">
-                <button type="button" onclick="calculateTrianglePerimeter()">Perimeter</button>
-                <button type="button" onclick="calculateTriangleArea()">Area</button>
+                <label for="equalSides">Equal Sides</label>
+                <input id="equalSides" type="number">
+                <label for="base">Base</label>
+                <input id="base" type="number">
+                <p>Do you know the height of your triangle?</p>
+                <button type="button" onclick="heightCalculator()">Get Height</button>
+                <label for="triangleHeight">Height</label>
+                <input id="triangleHeight" type="number">
+                <button type="button" onclick="isoscelesPerimeter()">Get Perimeter</button>
+                <button type="button" onclick="isoscelesArea()">Get Area</button>
+                <button type="reset">Reset</button>
             </form>
         </section>
         <section id="Circle">
