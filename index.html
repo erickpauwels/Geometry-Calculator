@@ -7,7 +7,68 @@
     <title>Geometry Figures</title>
 </head>
 <body>
-    
+    <header>
+        <h1>Figures Calculator</h1>
+    </header>   
+    <main>
+        <section id="square">
+            <h2>Square</h2>
+            <form>
+                <label for="squareSide">Square side</label>
+                <input id="squareSide" type="number">
+                <button type="button" onclick="calculateSquarePerimeter()">Get Perimeter</button>
+                <button type="button" onclick="calculateSquareArea()">Get Area</button>
+            </form>
+        </section>
+        <section id="triangle">
+            <h2>Triangle</h2>
+            <label for="triangles_options">Choose another type of Triangle</label>
+            <select name="triangle" id="triangle_type">
+                <option value=""></option>
+                <option value="isosceles">Isosceles</option>
+            </select>
+            <form id="triangleForm">
+                <label for="triangleSide1">Side A</label>
+                <input id="triangleSide1" type="number" required>
+                <label for="triangleSide2">Side B</label>
+                <input id="triangleSide2" type="number" required>
+                <label for="triangleBase">Base</label>
+                <input id="triangleBase" type="number" required>
+                <p>Do you know the height of your triangle?</p>
+                <button type="button" onclick="heightCalculator()">Get Height</button>
+                <label for="triangleHeight">Height</label>
+                <input id="triangleHeight" type="number">
+                <button type="button" onclick="trianglePerimeter()">Get Perimeter</button>
+                <button type="button" onclick="calculateTriangleArea()">Get Area</button>
+                <button type="reset">Reset</button>
+            </form>
+            <form>
+                <h3>Isosceles Triangle</h3>
+                <label for="triangleSide1">Side A</label>
+                <input id="triangleSide1" type="number">
+                <label for="triangleSide2">Side B</label>
+                <input id="triangleSide2" type="number">
+                <label for="triangleBase">Base</label>
+                <input id="triangleBaseiso" type="number">
+                <button type="button" onclick="calculateTrianglePerimeter()">Perimeter</button>
+                <button type="button" onclick="calculateTriangleArea()">Area</button>
+            </form>
+        </section>
+        <section id="Circle">
+            <h2>Circle</h2>
+            <form>
+                <label for="radio">Radio</label>
+                <input id="radio" type="number">
+                <button type="button" onclick="diameter()">Diameter</button>
+                <button type="button" onclick="circunference()">Circunference</button>
+                <button type="button" onclick="circleArea()">Area</button>
+            </form>
+        </section>
+    </main>
+    <footer>    
+        Developed by Erick Pauwels
+    </footer>
 </body>
-<script src="/figures.js"></script>
+<script src="/js/variables.js"></script>
+<script src="/js/figures.js"></script>
 </html>
