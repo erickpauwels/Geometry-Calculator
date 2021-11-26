@@ -1,3 +1,5 @@
+/*------------------- GEOMETRIC CALCULATOR ----------------*/
+
 // square 
 const squareSide = document.getElementById("squareSide");
 // checkbox
@@ -21,3 +23,12 @@ const squareResult = document.getElementById("squareResult");
 const triangleResult = document.getElementById("triangleResult");
 const isoscelesResult = document.getElementById("isoscelesResult");
 const circleResult = document.getElementById("circleResult");
+
+/*---------------------- PERCENTAGE & DISCOUNTS -------------------------- */
+
+const price = document.getElementById("price");
+const discount = document.getElementById("discount");
+const coupon = document.getElementById("coupon");
+const userFinalPrice = document.getElementById("result");
+const invalidCoupon = document.getElementById("invalidCoupon");
+
