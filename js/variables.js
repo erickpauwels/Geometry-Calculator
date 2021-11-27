@@ -32,3 +32,5 @@ const coupon = document.getElementById("coupon");
 const userFinalPrice = document.getElementById("result");
 const invalidCoupon = document.getElementById("invalidCoupon");
 
+
+/*-------------------- MEAN - MEDIAN - MODE ----------------------------- */

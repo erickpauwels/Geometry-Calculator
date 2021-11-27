@@ -2,7 +2,7 @@
 // Disables Inputs 
 coupon.disabled = true;
 const couponAble = () =>{discount.value= ""; coupon.disabled = false; discount.disabled = true;}
-const couponDisabled = () =>{coupon.value = ""; coupon.disabled = true;discount.disabled = false;}
+const couponDisabled = () =>{coupon.value = ""; invalidCoupon.innerText = ""; coupon.disabled = true;discount.disabled = false;}
 
 // Coupons Array
 const coupons = [
@@ -32,18 +32,17 @@ const  finalPrice = (userPrice, discountValue) => {
 
 // Valid Coupon function
 
-function validFunction(userPrice, discountCuopon){
+const validFunction = (userPrice, discountCuopon)=>{
 
     let validCoupon = coupons.find(function(coupons) {
         return coupons.name == discountCuopon;
     });
-    
-    let couponsDiscount = validCoupon.discount;
    
     if (!validCoupon) {
         invalidCoupon.innerText = "Coupon invalid!"
         userFinalPrice.innerText = "";
     } else {
+        let couponsDiscount = validCoupon.discount;
         console.log(Boolean(validCoupon));
         console.log(couponsDiscount);
         finalPrice(userPrice,couponsDiscount);
@@ -51,14 +50,23 @@ function validFunction(userPrice, discountCuopon){
 }
 
 // Result Event
+
+
+
 function finalPriceFunction() {
-    let userPrice = Number(price.value);
-    let discountValue = Number(discount.value); 
 
-    finalPrice(userPrice,discountValue);
+    var userPrice = Number(price.value);
+    var discountValue = Number(discount.value); 
+    var discountCuopon = coupon.value.toLowerCase();
 
-    let discountCuopon = coupon.value.toLowerCase();
-    validFunction(userPrice, discountCuopon);
+    if (discountValue && userPrice) {
+        finalPrice(userPrice,discountValue);    
+    }else if (discountCuopon && userPrice){
+        console.log(`hola`);
+        validFunction(userPrice, discountCuopon);
+    }else{
+        userFinalPrice.innerText = "Missing data!"
+    }
 
 }
 
