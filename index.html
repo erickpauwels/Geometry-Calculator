@@ -4,74 +4,20 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Geometry Figures</title>
+    <title>Menu</title>
 </head>
+<header>
+    <a href="/index.html">Index</a>
+    <nav>
+        <ul>
+            <li><a href="/geometry.html">Geometry</a></li>
+            <li><a href="/media.html">Media</a></li>
+            <li><a href="/percentage.html">Percentage</a></li>
+            <li><a href="#">Salaries</a></li>
+        </ul>
+    </nav>
+</header>
 <body>
-    <header>
-        <h1>Figures Calculator</h1>
-    </header>   
-    <main>
-        <section id="square">
-            <h2>Square</h2>
-            <form>
-                <label for="squareSide">Square side</label>
-                <input id="squareSide" type="number">
-                <button type="button" onclick="calculateSquarePerimeter()">Get Perimeter</button>
-                <button type="button" onclick="calculateSquareArea()">Get Area</button>
-            </form>
-            <div id="squareResult"></div>
-        </section>
-        <section id="triangle">
-            <h2>Triangle</h2>
-            <input type="checkbox" onclick="isosceles()" id="checkbox">Isosceles
-            <form id="triangleForm">
-                <label for="triangleSide1">Side A</label>
-                <input id="triangleSide1" type="number" required>
-                <label for="triangleSide2">Side B</label>
-                <input id="triangleSide2" type="number" required>
-                <label for="triangleBase">Base</label>
-                <input id="triangleBase" type="number" required>
-                <label for="normalHeight">Height</label>
-                <input id="normalHeight" type="number" required>
-                <button type="button" onclick="trianglePerimeter()">Get Perimeter</button>
-                <button type="button" onclick="calculateTriangleArea()">Get Area</button>
-                <button type="reset">Reset</button>
-                <div id="triangleResult"></div>
-            </form>
-            
-            <form id="isosceles">
-                <h3>Isosceles Triangle</h3>
-                <label for="equalSides">Equal Sides</label>
-                <input id="equalSides" type="number">
-                <label for="base">Base</label>
-                <input id="base" type="number">
-                <p>Do you know the height of your triangle?</p>
-                <button type="button" onclick="heightCalculator()">Get Height</button>
-                <label for="triangleHeight">Height</label>
-                <input id="triangleHeight" type="number">
-                <button type="button" onclick="isoscelesPerimeter()">Get Perimeter</button>
-                <button type="button" onclick="isoscelesArea()">Get Area</button>
-                <button type="reset">Reset</button>
-                <div id="isoscelesResult"></div>
-            </form>
-        </section>
-        <section id="Circle">
-            <h2>Circle</h2>
-            <form>
-                <label for="radio">Radio</label>
-                <input id="radio" type="number">
-                <button type="button" onclick="diameter()">Diameter</button>
-                <button type="button" onclick="circunference()">Circunference</button>
-                <button type="button" onclick="circleArea()">Area</button>
-                <button type="reset">Reset</button>
-            </form>
-            <div id="circleResult"></div>
-        </section>
-    </main>
-    <footer>    
-        Developed by Erick Pauwels
-    </footer>
-    <script src="js/variables.js"></script>
-    <script src="js/figures.js"></script>
+<h1>MATH TEACHER EVA</h1>
 </body>
 </html>
