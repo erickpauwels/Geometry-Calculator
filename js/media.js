@@ -1,4 +1,29 @@
  
+// Print Values 
+const list = [];
+const printValues = () =>{
+    let number = Number(values.value);
+    list.push(number);
+    printedValues.textContent = `${list}`;    
+    form.reset();
+    return false;
+};
+
+// Delete lasT value 
+const deleteValue = () =>{
+    list.pop();  
+    printedValues.textContent = list;
+    if (list.length<1) {
+        printedValues.textContent = "NO MORE VALUES TO DELETE";
+    }
+}
+
+//Reset Values
+const resetValues = () =>{
+    list.splice(0, list.length);
+    printedValues.textContent = `Values DELETED`; 
+}
+
 //---------------- MEAN - with .reduce--------------------//
 function mean(numberlist) {
     const acumulate = (acumular, newNumber) => acumular + newNumber;
@@ -56,3 +81,4 @@ function mode (list){
     console.log(mode);
     return mode[0];
 }
+

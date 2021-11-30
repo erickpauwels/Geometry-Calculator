@@ -34,3 +34,10 @@ const invalidCoupon = document.getElementById("invalidCoupon");
 
 
 /*-------------------- MEAN - MEDIAN - MODE ----------------------------- */
+
+const meanSpan = document.getElementById("mean");
+const medianSpan = document.getElementById("median");
+const modeSpan = document.getElementById("mode");
+const printedValues = document.getElementById("printedValues");
+const resultsContainer = document.getElementById("resultsContainer");
+const values = document.getElementById("values");

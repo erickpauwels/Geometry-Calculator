@@ -10,6 +10,24 @@
     <header>
         <h1>Mean - Media - Mode</h1>
     </header>
+    <main>
+            <form id="form">
+            <p>Introduce the values you want to calculate</p>
+            <input type="number" id="values" required>     
+            <button type="submit" id="submitBtn" onclick=" return printValues()">Set</button>       
+            <button type="button" onclick="resetValues()">Reset</button>
+            <button type="button" onclick="deleteValue()">Delete last value</button>
+            </form>
+            <br>
+            <div>Values:<span id="printedValues"></span></div>
+            <button type="button" id="resultsBtn">Get results</button>
+            <div id="resultsContainer"> 
+                <span id="mean">Mean:</span><br>
+                <span id="median">Median:</span><br>
+                <span id="mode">Mode:</span>
+            </div>
+    </main>
+    <script src="js/variables.js"></script>
     <script src="js/media.js"></script>
 </body>
 </html>
