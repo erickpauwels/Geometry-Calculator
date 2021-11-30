@@ -4,6 +4,7 @@ const list = [];
 const printValues = () =>{
     let number = Number(values.value);
     list.push(number);
+    console.log(list);
     printedValues.textContent = `${list}`;    
     form.reset();
     return false;
@@ -15,12 +16,14 @@ const deleteValue = () =>{
     printedValues.textContent = list;
     if (list.length<1) {
         printedValues.textContent = "NO MORE VALUES TO DELETE";
+        resultsContainer.style.display = "none"
     }
 }
 
 //Reset Values
 const resetValues = () =>{
     list.splice(0, list.length);
+    resultsContainer.style.display = "none"
     printedValues.textContent = `Values DELETED`; 
 }
 
@@ -39,9 +42,10 @@ function sortOrder(a,b) {
 }
 
 //Array function
-function median (list) {
+function median(list) {
     // order elements 
     list.sort(sortOrder);
+    console.log(list);
     //If even or not  
     if(list.length % 2 === 0) {
         let number1 = list.length / 2 ;
@@ -57,7 +61,7 @@ function median (list) {
 
 //--------------MODE with .MAP / .SORT / .POP ------------------// 
 
-function mode (list){
+function mode(list){
 
     //Use Map for transform array to object and count the elements.
     // create new object 
@@ -82,3 +86,13 @@ function mode (list){
     return mode[0];
 }
 
+// PRINT RESULTS 
+resultsContainer.style.display = "none"
+const getResults = () =>{
+    list.length<1 ? resultsContainer.style.display = "none":resultsContainer.style.display = "block";
+    meanSpan.textContent= `Mean: ${mean(list)}`
+    modeSpan.textContent= `Mode: ${mode(list)}`;
+    medianSpan.innerHTML = `
+        Median: ${median(list)}
+        <br><span> Quantity of values: ${list.length}</span>`;;
+}
