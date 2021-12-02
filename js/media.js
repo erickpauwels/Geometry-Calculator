@@ -27,13 +27,8 @@ const resetValues = () =>{
     printedValues.textContent = `Values DELETED`; 
 }
 
-//---------------- MEAN - with .reduce--------------------//
-function mean(numberlist) {
-    const acumulate = (acumular, newNumber) => acumular + newNumber;
-    let finalAcumulate = numberlist.reduce(acumulate, 0);
-    let average = finalAcumulate / numberlist.length;
-    return average;
-}
+//---------------- MEAN - with .reduce - function in helpers.js --------------------//
+
 
 //--------------- MEDIAN - with .sort-----------------//
 //order function 
@@ -90,6 +85,7 @@ function mode(list){
 resultsContainer.style.display = "none"
 const getResults = () =>{
     list.length<1 ? resultsContainer.style.display = "none":resultsContainer.style.display = "block";
+    // mean function in helpers.js
     meanSpan.textContent= `Mean: ${mean(list)}`
     modeSpan.textContent= `Mode: ${mode(list)}`;
     medianSpan.innerHTML = `
