@@ -41,3 +41,16 @@ const modeSpan = document.getElementById("mode");
 const printedValues = document.getElementById("printedValues");
 const resultsContainer = document.getElementById("resultsContainer");
 const values = document.getElementById("values");
+
+/*--------------------------- SALARIES-------------------------- */
+
+const nameSalaries = document.getElementById("nameSalaries");
+const numberSalaries = document.getElementById("numberSalaries");
+const medianResults = document.getElementById("medianResults");
+const valuesSalaries = document.getElementById("valuesSalaries");
+const getResultsBtn = document.getElementById("getResultsBtn");
+const e = document.getElementById("percentage");
+const h2Value = document.getElementById("h2Value");
+const topPercentage = document.getElementById("topPercentage");
+const topMedian = document.getElementById("topMedian");
+

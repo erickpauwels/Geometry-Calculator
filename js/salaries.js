@@ -1,124 +1,96 @@
-// EJ DE ARRAY DE SALARIOS 
 
-const salaries = [
-    {
-        name: "pepito",
-        salarie: 25000,
-    },
-    {
-        name: "maria",
-        salarie: 30000,
-    },
-    {
-        name: "maria",
-        salarie: 30000,
-    },
-    {
-        name: "maria",
-        salarie: 30000,
-    },
-    {
-        name: "maria",
-        salarie: 30000,
-    },
-    {
-        name: "juan",
-        salarie: 40000,
-    },
-    {
-        name: "pedro",
-        salarie: 80000,
-    },
-    {
-        name: "pedro",
-        salarie: 9000,
-    },
-    {
-        name: "pedro",
-        salarie: 150000,
-    },
-    {
-        name: "pedro",
-        salarie: 9000,
-    },
-    {
-        name: "pedro",
-        salarie: 150000,
-    },
-    {
-        name: "pedro",
-        salarie: 9000,
-    },
-    {
-        name: "pedro",
-        salarie: 150000,
-    },
+//New Array
+const salaries = [];
 
-    {
-        name: "pedro",
-        salarie: 150000,
-    },
-    {
-        name: "pedro",
-        salarie: 9000,
-    },
-    {
-        name: "pedro",
-        salarie: 150000,
-    },
-    {
-        name: "pedro",
-        salarie: 9000,
-    },
-    {
-        name: "pedro",
-        salarie: 150000,
-    },
-    {
-        name: "pedro",
-        salarie: 9000,
-    },
-    {
-        name: "pedro",
-        salarie: 150000,
-    },
-    {
-        name: "pedro",
-        salarie: 9000,
-    },
-    {
-        name: "pedro",
-        salarie: 150000,
-    },
-]
+// Change % value
+function update (){
+    p = e.options[e.selectedIndex].value;
+    p > 0 ? localStorage.setItem("percentage",p) : NaN;
+    }
+
+// Constructor
+function sal (name, salarie){
+    this.name = name,
+    this.salarie =salarie
+}
+  
+
+//Set VALUES btn
+
+function setValues() {
+    let finalObject = new sal(nameSalaries.value,Number(numberSalaries.value));
+    salaries.push(finalObject);
+    h2Value.innerHTML = "Values";
+    //Print Values
+    const p1 = document.createElement('p');
+    salaries.forEach(e => {
+       p1.innerHTML = `Name: ${e.name} Salarie: ${e.salarie}`
+       valuesSalaries.appendChild(p1);
+    });
+
+    //.MAP & .SORT methods
+    const salariesArray = salaries.map((numbers) => numbers.salarie).sort((a,b) =>a-b);
+    console.log(salariesArray);
+    localStorage.setItem("Array", JSON.stringify(salariesArray));
+
+    form.reset();
+    return false
+}
+
+//Get resuls BTn
+getResultsBtn.addEventListener('click', ()=>{
+
+    let salariesArray = JSON.parse(localStorage.getItem("Array"));
+    console.log(salariesArray);
+    //Median Salaries Function
+    medianSalaries(salariesArray);
+    console.log(`Median Salaries: ${medianSalaries(salariesArray)}`);
+    medianResults.innerText = medianSalaries(salariesArray);
+
+    let getPercentage = Number(localStorage.getItem("percentage"))
+    console.log(getPercentage);
+
+    //Top 10% salaries
+    topSalaries(salariesArray,getPercentage);
+    console.log(`Top % Salaries: ${topSalaries(salariesArray,getPercentage)}`);
+    topPercentage.innerText = ` ${topSalaries(salariesArray,getPercentage)}`;
+
+    //Median Top% Salaries
+    medianTopSalaries(topSalaries(salariesArray, getPercentage));
+    console.log(`Median Top%: ${medianTopSalaries(topSalaries(salariesArray,getPercentage))}`);
+    topMedian.innerText = medianTopSalaries(topSalaries(salariesArray,getPercentage));
+})
+
+//Reset Values
+const resetValues = () =>{
+    h2Value.innerHTML = "Values Deleted";
+    valuesSalaries.innerText = "";
+    localStorage.clear();
+}
 
 //----------------- MEDIAN SALARIES WIth .MAP - .SORT - .REDUCE -------------------//
- //Transform and sort to select only the argument "salarie"
-const salariesArray = salaries.map((numbers) => numbers.salarie).sort((a,b) =>a-b);
-console.log(salariesArray);
+
 
 //Median Salaries
-const medianSalaries = () => {
+const medianSalaries = (salariesArray) => {
     // If the array is Even or NOt
     if (salariesArray.length % 2 === 0) {
-        let number1 = salariesArray.length /2;
-        let number2 = number1 - 1;
-        console.log(salariesArray[number1], salariesArray[number2]);
-        //Set Mean function with arguments number 1 & number2
-        return mean([salariesArray[number1], salariesArray[number2]]);
+        let numberi = salariesArray.length /2;
+        let number2 = numberi - 1;
+        //Set Mean function with arguments number i & number2
+        return mean([salariesArray[numberi], salariesArray[number2]]);
     }else{
         // Math.floor to round out the length array to a round number
         let notEven = Math.floor(salariesArray.length / 2);
-         console.log(`array length ${salariesArray.length}`);
         return salariesArray[notEven];
     }
 }
 
-//-------------------TOP 10% SALARIES-----------------------//
 
+//-------------------TOP % SALARIES-----------------------//
 
-const topSalaries = () => {
-    let positionStart = Math.floor(salariesArray.length * 90)/100;
+const topSalaries = (salariesArray, percentage) => {
+    let positionStart = Math.floor(salariesArray.length * percentage)/100;
     // Use .SLICE to create a new array istead of chanching the original with .Splice
     let newarray = salariesArray.slice(positionStart, salariesArray.length); 
     /*   // IF I USE .SPLICE 
@@ -127,28 +99,17 @@ const topSalaries = () => {
     return newarray;
 }
 
-console.log(topSalaries());
+//-----------MEDIAN OF TOPi0%-------//
+const medianTopSalaries = (salaries2) => {
 
-const medianTopSalaries = function (salaries2){
     if (salaries2.length % 2 === 0) {
-        let number1 = salaries2.length /2;
-        let number2 = number1 - 1;
-        console.log(salaries2[number1], salaries2[number2]);
-        //Set Mean function with arguments number 1 & number2
-        return mean([salaries2[number1], salaries2[number2]]);
+        let numberi = salaries2.length /2;
+        let number2 = numberi - 1;
+        //Set Mean function with arguments number i & number2
+        return mean([salaries2[numberi], salaries2[number2]]);
     }else{
         // Math.floor to round out the length array to a round number
         let notEven = Math.floor(salaries2.length / 2);
-         console.log(`array length ${salaries2.length}`);
         return salaries2[notEven];
     }
 }
-
-/* const top10salaries = salariesArray.splice(positionStart, positionEnd); 
-console.log(top10salaries); */
-
-//-----------MEDIAN OF TOP10%-------//
-
-/* let medianTop10 = medianSalaries(top10salaries);
-console.log(`Median top 10 ${medianTop10}`); */
-    

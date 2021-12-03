@@ -8,5 +8,3 @@ const mean = (array) => {
     return average;
 }
 
-// Median function for salaries
-

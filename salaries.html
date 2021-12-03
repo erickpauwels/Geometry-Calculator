@@ -20,6 +20,32 @@
     </header> 
     <main>
         <h1>Salaries</h1>
+        <form id="form" autocomplete="off">
+            <label>Insert the name</label>
+            <input type="text" id="nameSalaries" placeholder="Ex: Matheu or a place 'Spain'" required>
+            <label for="numberSalaries">Insert the salaries</label>
+            <input type="number"  id="numberSalaries" placeholder="In numbers">
+            <button type="submit" onclick="return setValues()" >Set Values</button>
+            <button type="button" onclick="resetValues()">Reset</button>
+        </form>
+        <h2 id="h2Value"></h2>
+        <div id="valuesSalaries">
+        </div>
+        <button type="button" id="getResultsBtn">Get Results</button>
+        <div>Median of Salaries = <span id="medianResults"></span></div>
+        <div>
+            <select name="%" id="percentage" onchange="update()">
+                <option value=""></option>
+                <option value="90">10%</option>
+                <option value="75">25%</option>
+                <option value="50">50%</option>
+            </select>
+             Top Salaries =
+            <span id="topPercentage"></span>
+        </div>
+        <div>Median Top Salaries =
+            <span id="topMedian"></span>
+        </div>
     </main>
     <script src="js/salaries.js"></script>
     <script src="js/helpers.js" ></script>
