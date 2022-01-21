@@ -40,4 +40,10 @@ header div button {
   font-size: 1.2rem;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
+
+header hr {
+  width: 80%;
+  margin: 0 auto;
+  margin-top: 15px;
+}
 /*# sourceMappingURL=styles.min.css.map */
