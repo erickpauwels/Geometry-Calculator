@@ -62,7 +62,7 @@ getResultsBtn.addEventListener('click', ()=>{
 })
 
 //Reset Values
-const resetValues = () =>{
+const resetSalariesValues = () =>{
     h2Value.innerHTML = "Values Deleted";
     valuesSalaries.innerText = "";
     localStorage.clear();

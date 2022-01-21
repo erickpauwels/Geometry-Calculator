@@ -82,7 +82,7 @@ function mode(list){
 }
 
 // PRINT RESULTS 
-resultsContainer.style.display = "none"
+resultsContainer.style.display = "none";
 const getResults = () =>{
     list.length<1 ? resultsContainer.style.display = "none":resultsContainer.style.display = "block";
     // mean function in helpers.js

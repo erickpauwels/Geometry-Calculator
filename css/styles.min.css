@@ -46,4 +46,20 @@ header hr {
   margin: 0 auto;
   margin-top: 15px;
 }
+
+#geometry_section {
+  display: none;
+}
+
+#salaries_section {
+  display: none;
+}
+
+#percentage_section {
+  display: none;
+}
+
+#media_section {
+  display: none;
+}
 /*# sourceMappingURL=styles.min.css.map */

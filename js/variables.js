@@ -1,3 +1,11 @@
+/*--------------------MAIN SECTION-------------------------*/ 
+
+const geometrySection = document.getElementById("geometry_section");
+const mediaSection = document.getElementById("media_section");
+const percentageSection = document.getElementById("percentage_section");
+const salariesSection = document.getElementById("salaries_section");
+
+
 /*------------------- GEOMETRIC CALCULATOR ----------------*/
 
 // square 
