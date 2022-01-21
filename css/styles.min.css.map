@@ -1,0 +1,16 @@
+{
+    "version": 3,
+    "mappings": "AGAA,AAAA,CAAC,CAAC;EACE,MAAM,EAAE,CAAC;EACT,OAAO,EAAE,CAAC;EACV,UAAU,EAAE,UAAU;EACtB,eAAe,EAAE,IAAI;CACxB;;AAED,AAAA,MAAM,CAAC;EACH,OAAO,EAAE,IAAI;EACb,cAAc,EAAE,MAAM;EACtB,OAAO,EAAE,GAAG;CA4Bf;;AA/BD,AAII,MAJE,CAIF,CAAC,CAAA;EACG,aAAa,EAAE,IAAI;CACtB;;AANL,AAOI,MAPE,CAOF,EAAE,CAAA;EACE,UAAU,EAAC,MAAM;EACjB,SAAS,EAAE,IAAI;CAClB;;AAVL,AAWI,MAXE,CAWF,CAAC,CAAA;EACG,UAAU,EAAE,IAAI;EAChB,UAAU,EAAE,MAAM;EAClB,SAAS,EAAE,IAAI;CAClB;;AAfL,AAgBI,MAhBE,CAgBF,GAAG,CAAA;EACC,UAAU,EAAE,IAAI;EAChB,OAAO,EAAE,IAAI;EACb,SAAS,EAAE,IAAI;EACf,eAAe,EAAE,MAAM;CAS1B;;AA7BL,AAqBQ,MArBF,CAgBF,GAAG,CAKC,MAAM,CAAA;EACD,OAAO,EAAE,IAAI;EACb,MAAM,EAAE,IAAI;EACZ,KAAK,EAAE,KAAK;EACZ,SAAS,EAAE,MAAM;EACjB,WAAW,EAAE,2DAA2D;CACxE",
+    "sources": [
+        "../styles.scss",
+        "../partials/_helpers.scss",
+        "../partials/_variables.scss",
+        "../partials/_main.scss",
+        "../partials/_geometry.scss",
+        "../partials/_salaries.scss",
+        "../partials/_percentage.scss",
+        "../partials/_media.scss"
+    ],
+    "names": [],
+    "file": "styles.min.css"
+}
