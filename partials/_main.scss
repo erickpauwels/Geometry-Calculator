@@ -10,16 +10,33 @@ header {
     flex-direction: column;
     padding: 5px;
     a{
-        margin-bottom: 30px;
+        margin:10px;
+        #logo{
+            color: $main;
+            font-size: 2.5rem;
+        }
     }
     h1{
-        text-align:center;
-        font-size: 18px;
+        width: 70%;
+        font-family: $roboto;
+        font-size: 1.2rem;
+        margin: 0 auto;
+        margin-top: 15px;
+        color:$font_color;
+        line-height: 30px;
+        #eva{
+            color: $main;
+        }
+        #robot{
+            font-size: 1.5rem;
+            color: $secondary;
+            margin-left: 5px;
+        }
     }
     p{
+       @extend %text;
         margin-top: 15px;
         text-align: center;
-        font-size: 18px;
     }
     div{
         margin-top: 15px;
@@ -27,11 +44,7 @@ header {
         flex-flow: wrap;
         justify-content: center;
         button{
-             padding: 15px;
-             margin: 10px;
-             width: 129px;
-             font-size: 1.2rem;
-             font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            @extend %button;
             }
     }
     hr {
