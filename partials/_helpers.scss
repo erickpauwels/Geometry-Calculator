@@ -1,0 +1,31 @@
+// Buttons
+
+// Nav Buttons
+
+%button {
+    border-radius: 10px;
+    background-color: $clear;
+    padding: 15px;
+    margin: 10px;
+    width: 129px;
+    font-family: $montserrat;
+    font-size: 1rem;
+    box-shadow: 2px 2px 5px $border;
+    border: $border;
+    transition: .3s ease all;
+    &:hover {
+        cursor: pointer;
+        background-color: $main;
+        color: $clear;
+        box-shadow: none;
+    }
+    .focus_button{
+        background-color: $main;
+        color: $clear;
+    }
+}
+
+%text{
+    font-size: 1rem;
+    font-family: $roboto;
+}

@@ -4,21 +4,26 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&family=Roboto&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.min.css">
-    <title>Menu</title>
+    <title>EVA - Math Teacher</title>
 </head>
 <body>
     <header>
-        <a href="./index.html"><img src="#" alt="logo"></a>
-        <h1>Hi, i´m EVA your digital math teacher</h1>
+        <a href="./index.html">
+            <i id="logo" class="fas fa-draw-polygon"></i>
+        </a>
+        <h1>Hi &#x1F44B, I´m <span id="eva">EVA</span> your digital math teacher  <i id="robot" class="fas fa-robot"></i></h1>
         <p>what do you want to calculate today?</p>
-            <div>
+        <div>
               <button type="button" onclick="geoSection()">Geometry</button>
               <button type="button" onclick="meSection()">Media</button>
               <button type="button" onclick="peSection()">Percentage</button>
               <button type="button" onclick="saSection()">Salaries</button>
-            </div>
-            <hr>
+        </div>
+        <hr>
     </header>
     <!-- Geometry Section  -->
     <div id="geometry_section" >

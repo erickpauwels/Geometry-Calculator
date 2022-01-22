@@ -1,3 +1,33 @@
+header div button {
+  border-radius: 10px;
+  background-color: #fcf9f9;
+  padding: 15px;
+  margin: 10px;
+  width: 129px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1rem;
+  box-shadow: 2px 2px 5px #a3a3a3;
+  border: #a3a3a3;
+  transition: .3s ease all;
+}
+
+header div button:hover {
+  cursor: pointer;
+  background-color: #562ee5a8;
+  color: #fcf9f9;
+  box-shadow: none;
+}
+
+header div button .focus_button {
+  background-color: #562ee5a8;
+  color: #fcf9f9;
+}
+
+header p {
+  font-size: 1rem;
+  font-family: "Roboto", sans-serif;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -12,18 +42,37 @@ header {
 }
 
 header a {
-  margin-bottom: 30px;
+  margin: 10px;
+}
+
+header a #logo {
+  color: #562ee5a8;
+  font-size: 2.5rem;
 }
 
 header h1 {
-  text-align: center;
-  font-size: 18px;
+  width: 70%;
+  font-family: "Roboto", sans-serif;
+  font-size: 1.2rem;
+  margin: 0 auto;
+  margin-top: 15px;
+  color: #414144;
+  line-height: 30px;
+}
+
+header h1 #eva {
+  color: #562ee5a8;
+}
+
+header h1 #robot {
+  font-size: 1.5rem;
+  color: #50E3C2;
+  margin-left: 5px;
 }
 
 header p {
   margin-top: 15px;
   text-align: center;
-  font-size: 18px;
 }
 
 header div {
@@ -31,14 +80,6 @@ header div {
   display: flex;
   flex-flow: wrap;
   justify-content: center;
-}
-
-header div button {
-  padding: 15px;
-  margin: 10px;
-  width: 129px;
-  font-size: 1.2rem;
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 header hr {
