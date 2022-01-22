@@ -1,15 +1,15 @@
-/*---------- Cuadrado------------ */
+/*---------- Square ------------ */
 
 const calculateSquarePerimeter = () =>{
     let side = squareSide.value; 
     const squarePerimeter = side * 4;
-    squareResult.textContent = `Perimetro Cuadrado: ${squarePerimeter} cm`;
+    squareResult.textContent = `Perimeter: ${squarePerimeter} cm`;
 }
 
 const calculateSquareArea = ()=> {
     let side = squareSide.value;
     const squareArea = (side) => side * side;
-    squareResult.textContent = `Area Cuadrado: ${squareArea(side)} cm2`;
+    squareResult.textContent = `Area: ${squareArea(side)} cm2`;
 }
 
 /*------------ Triangulo------------ */ 

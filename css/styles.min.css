@@ -23,9 +23,68 @@ header div button .focus_button {
   color: #fcf9f9;
 }
 
-header p {
+#geometry_section #square form div button {
+  border-radius: 4px;
+  width: fit-content;
+  background-color: #fcf9f9;
+  margin-right: 5px;
+  padding: 10px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1rem;
+  box-shadow: none;
+  border: none;
+  color: #562ee5a8;
+  transition: .3s ease all;
+}
+
+#geometry_section #square form div button:hover {
+  cursor: pointer;
+  background-color: #af99ff;
+  color: #fcf9f9;
+  box-shadow: none;
+}
+
+#geometry_section #square form div button .focus_button {
+  background-color: #af99ff;
+  color: #fcf9f9;
+}
+
+header p, #geometry_section #square form label, #geometry_section #square #squareResult {
   font-size: 1rem;
   font-family: "Roboto", sans-serif;
+}
+
+#geometry_section h2 {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.5rem;
+  margin-top: 15px;
+  color: #414144;
+  line-height: 30px;
+}
+
+#geometry_section #square h3 {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.2rem;
+  color: #fcf9f9;
+}
+
+#geometry_section #square form input {
+  margin-top: 15px;
+  border-radius: 4px;
+  background: #af99ff;
+  padding: 10px;
+  text-align: start;
+  width: 50%;
+  color: #fcf9f9;
+  box-shadow: none;
+  border: none;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1rem;
+}
+
+#geometry_section #square form input:focus {
+  outline: none;
+  box-shadow: none;
 }
 
 * {
@@ -89,7 +148,49 @@ header hr {
 }
 
 #geometry_section {
-  display: none;
+  display: block;
+  margin: 20px;
+  margin-top: 15px;
+}
+
+#geometry_section #square {
+  margin-top: 15px;
+  background-color: #562ee5a8;
+  border-radius: 10px;
+  height: auto;
+  padding: 10px;
+}
+
+#geometry_section #square h3 {
+  display: flex;
+  align-items: center;
+}
+
+#geometry_section #square h3 i {
+  margin-right: 10px;
+  font-size: 2rem;
+  color: #fcf9f9;
+}
+
+#geometry_section #square form {
+  display: flex;
+  flex-direction: column;
+  margin-top: 15px;
+}
+
+#geometry_section #square form label {
+  color: #fcf9f9;
+}
+
+#geometry_section #square form div {
+  margin-top: 15px;
+}
+
+#geometry_section #square #squareResult {
+  margin: 15px 0px 15px 0px;
+  font-size: 1.2rem;
+  color: #fcf9f9;
+  font-weight: bold;
 }
 
 #salaries_section {

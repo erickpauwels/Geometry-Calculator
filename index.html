@@ -27,19 +27,21 @@
     </header>
     <!-- Geometry Section  -->
     <div id="geometry_section" >
-        <h1>Figures Calculator</h1>
+        <h2>Geometry</h2>
         <section id="square">
-            <h2>Square</h2>
+            <h3><i class="far fa-square"></i>Square</h3>
             <form>
-                <label for="squareSide">Square side</label>
+                <label for="squareSide">How long are your square´s sides?</label>
                 <input id="squareSide" type="number">
+                <div>
                 <button type="button" onclick="calculateSquarePerimeter()">Get Perimeter</button>
                 <button type="button" onclick="calculateSquareArea()">Get Area</button>
+                </div>
             </form>
             <div id="squareResult"></div>
         </section>
         <section id="triangle">
-            <h2>Triangle</h2>
+            <h3>Triangle</h3>
             <input type="checkbox" onclick="isosceles()" id="checkbox">Isosceles
             <form id="triangleForm">
                 <label for="triangleSide1">Side A</label>
@@ -73,7 +75,7 @@
             </form>
         </section>
         <section id="Circle">
-            <h2>Circle</h2>
+            <h3>Circle</h3>
             <form>
                 <label for="radio">Radio</label>
                 <input id="radio" type="number">
