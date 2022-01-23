@@ -78,6 +78,7 @@
             justify-content: center;
         }
         #triangleForm{
+            div{
             display: flex;
             flex-direction: column;
             margin-top: 15px;
@@ -92,6 +93,7 @@
                 margin-bottom: 15px;
             }
             div{
+                display: block;
                 margin-top: 15px;
                 button{
                     @extend %secondary_buttons;
@@ -102,6 +104,7 @@
         #triangleResult{
             @extend %results;            
         }
+    }
         #isosceles {
             margin-top: 15px;
             div{
@@ -129,9 +132,49 @@
          #height_input{
              display: block;
              button{
-                 margin-left: 15px;
+                 margin-left: 5px;
              }
          }
+        }
+    }
+    #circle{
+        margin-top: 15px;
+        background-color:$main;
+        border-radius: 10px;
+        height: auto;
+        padding: 10px;
+        h3{
+            display: flex;
+            align-items: center;
+            @extend %h3;
+            i{
+                margin-right: 10px;
+                font-size: 2rem;
+                color: $clear;
+            }
+        }
+        p{
+            @extend %text;
+            margin-top: 15px;
+        }
+        form{
+            display: flex;
+            flex-direction: column;
+            label{
+                @extend %text;
+            }
+            input{
+                @extend %inputs;
+            }
+            div{
+                button{
+                    margin-top: 10px;
+                    @extend %secondary_buttons;
+                }
+            }
+        }
+        #circleResult{
+            @extend %results;           
         }
     }
 }

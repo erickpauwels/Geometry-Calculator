@@ -3,13 +3,13 @@
 const calculateSquarePerimeter = () =>{
     let side = squareSide.value; 
     const squarePerimeter = side * 4;
-    squareResult.textContent = `Perimeter: ${squarePerimeter} cm`;
+    squareResult.textContent = `Perimeter = ${squarePerimeter} cm`;
 }
 
 const calculateSquareArea = ()=> {
     let side = squareSide.value;
     const squareArea = (side) => side * side;
-    squareResult.textContent = `Area: ${squareArea(side)} cm2`;
+    squareResult.textContent = `Area = ${squareArea(side)} cm2`;
 }
 
 /*------------ Triangulo------------ */ 
@@ -76,7 +76,7 @@ const isoscelesPerimeter = () => {
         isoscelesResult.textContent = `Missing Values!`;
     }else {   
     const perimeter = (sides*2) + base;
-    isoscelesResult.textContent = `Isoceles Perimeter ${perimeter} cm`;
+    isoscelesResult.textContent = `Isosceles Perimeter = ${perimeter} cm`;
     }
 }
 
@@ -89,7 +89,7 @@ function isoscelesArea() {
     }else {   
         const triangleArea = (base, height)=>(base * height)/2;
         console.log(`Area del Triangulo ${triangleArea(base, height)} cm2`);
-        isoscelesResult.textContent = `Area = ${triangleArea(base, height)} cm2`;
+        isoscelesResult.textContent = `Isosceles Area = ${triangleArea(base, height)} cm2`;
 
     }  
 }
@@ -109,14 +109,14 @@ const pi = Math.PI;
 function circunference () {
     let radio = Number(radioValue.value);
     const circleCircunference = (radio) => pi*2*radio;
-    circleResult.textContent = `Circunference = ${circleCircunference(radio)}`;
+    circleResult.textContent = `Circunference = ${circleCircunference(radio).toFixed(2)}`;
 }
 
 //Area
 function circleArea(){
     let radio = Number(radioValue.value);
     var area = (radio*radio)*pi;
-    circleResult.textContent = `Area = ${area}`;
+    circleResult.textContent = `Area = ${area.toFixed(2)}`;
 }
 
 

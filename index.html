@@ -34,8 +34,8 @@
                 <label for="squareSide">How long are your square´s sides?</label>
                 <input id="squareSide" type="number">
                 <div>
-                <button type="button" onclick="calculateSquarePerimeter()">Get Perimeter</button>
-                <button type="button" onclick="calculateSquareArea()">Get Area</button>
+                <button type="button" onclick="calculateSquarePerimeter()">Perimeter</button>
+                <button type="button" onclick="calculateSquareArea()">Area</button>
                 </div>
             </form>
             <div id="squareResult"></div>
@@ -46,6 +46,7 @@
             <input type="checkbox" onclick="isosceles()" id="checkbox">
             <label for="checkbox">Isosceles Triangle</label>
             <form id="triangleForm">
+                <div>
                 <label for="triangleSide1">Side A</label>
                     <input id="triangleSide1" type="number" required>
                 <label for="triangleSide2">Side B</label>
@@ -55,11 +56,12 @@
                 <label for="normalHeight">Height</label>
                     <input id="normalHeight" type="number" required>
                 <div>
-                <button type="button" onclick="trianglePerimeter()">Get Perimeter</button>
-                <button type="button" onclick="calculateTriangleArea()">Get Area</button>
+                <button type="button" onclick="trianglePerimeter()">Perimeter</button>
+                <button type="button" onclick="calculateTriangleArea()">Area</button>
                 <button type="reset" onclick="resetTriangle()">Reset</button>
                 </div>
                 <div id="triangleResult"></div>
+            </div>
             </form>
             <!-- Isosceles -->
             <form id="isosceles">
@@ -75,22 +77,27 @@
                     </div>
                 </div>
                 <div id="isosceles_buttons">
-                    <button type="button" onclick="isoscelesPerimeter()">Get Perimeter</button>
-                    <button type="button" onclick="isoscelesArea()">Get Area</button>
+                    <button type="button" onclick="isoscelesPerimeter()">Perimeter</button>
+                    <button type="button" onclick="isoscelesArea()">Area</button>
                     <button type="reset" onclick="resetTriangle()">Reset</button>
                 </div>
                 <div id="isoscelesResult"></div>
             </form>
         </section>
-        <section id="Circle">
-            <h3>Circle</h3>
+        <section id="circle">
+            <h3><i class="far fa-circle"></i>Circle</h3>
+            <p>What´s your circle´s radio?</p>
             <form>
-                <label for="radio">Radio</label>
-                <input id="radio" type="number">
-                <button type="button" onclick="diameter()">Diameter</button>
-                <button type="button" onclick="circunference()">Circunference</button>
-                <button type="button" onclick="circleArea()">Area</button>
-                <button type="reset">Reset</button>
+                <div>
+                    <label for="radio">Radio</label>
+                    <input id="radio" type="number">
+                    <div>
+                        <button type="button" onclick="diameter()">Diameter</button>
+                        <button type="button" onclick="circunference()">Circunference</button>
+                        <button type="button" onclick="circleArea()">Area</button>
+                        <button type="reset">Reset</button>
+                    </div>
+                </div>
             </form>
             <div id="circleResult"></div>
         </section>
