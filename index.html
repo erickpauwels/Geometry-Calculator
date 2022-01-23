@@ -41,36 +41,44 @@
             <div id="squareResult"></div>
         </section>
         <section id="triangle">
-            <h3>Triangle</h3>
-            <input type="checkbox" onclick="isosceles()" id="checkbox">Isosceles
+            <div id="triangle_shape"><h3>Triangle</h3></div>
+            <p>What are the measurements of your triangle?</p>
+            <input type="checkbox" onclick="isosceles()" id="checkbox">
+            <label for="checkbox">Isosceles Triangle</label>
             <form id="triangleForm">
                 <label for="triangleSide1">Side A</label>
-                <input id="triangleSide1" type="number" required>
+                    <input id="triangleSide1" type="number" required>
                 <label for="triangleSide2">Side B</label>
-                <input id="triangleSide2" type="number" required>
+                    <input id="triangleSide2" type="number" required>
                 <label for="triangleBase">Base</label>
-                <input id="triangleBase" type="number" required>
+                    <input id="triangleBase" type="number" required>
                 <label for="normalHeight">Height</label>
-                <input id="normalHeight" type="number" required>
+                    <input id="normalHeight" type="number" required>
+                <div>
                 <button type="button" onclick="trianglePerimeter()">Get Perimeter</button>
                 <button type="button" onclick="calculateTriangleArea()">Get Area</button>
-                <button type="reset">Reset</button>
+                <button type="reset" onclick="resetTriangle()">Reset</button>
+                </div>
                 <div id="triangleResult"></div>
             </form>
-            
+            <!-- Isosceles -->
             <form id="isosceles">
-                <h3>Isosceles Triangle</h3>
+                <div>
                 <label for="equalSides">Equal Sides</label>
-                <input id="equalSides" type="number">
+                    <input id="equalSides" type="number">
                 <label for="base">Base</label>
-                <input id="base" type="number">
-                <p>Do you know the height of your triangle?</p>
-                <button type="button" onclick="heightCalculator()">Get Height</button>
-                <label for="triangleHeight">Height</label>
-                <input id="triangleHeight" type="number">
-                <button type="button" onclick="isoscelesPerimeter()">Get Perimeter</button>
-                <button type="button" onclick="isoscelesArea()">Get Area</button>
-                <button type="reset">Reset</button>
+                    <input id="base" type="number">
+                    <label for="triangleHeight">Do you know the height of your triangle?</label>
+                     <div id="height_input">   
+                        <input id="triangleHeight" type="number">
+                        <button type="button" onclick="heightCalculator()">Get Height</button>
+                    </div>
+                </div>
+                <div id="isosceles_buttons">
+                    <button type="button" onclick="isoscelesPerimeter()">Get Perimeter</button>
+                    <button type="button" onclick="isoscelesArea()">Get Area</button>
+                    <button type="reset" onclick="resetTriangle()">Reset</button>
+                </div>
                 <div id="isoscelesResult"></div>
             </form>
         </section>

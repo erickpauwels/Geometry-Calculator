@@ -27,7 +27,6 @@
             margin-top: 15px;
             label{
                 @extend %text;
-                color: $clear;
             }
             input{
                 @extend %inputs;
@@ -40,11 +39,99 @@
             }
         }
         #squareResult{
-            margin: 15px 0px 15px 0px;
+            @extend %results;           
+        }
+    }
+    #triangle{
+        margin-top: 15px;
+        background-color:$secondary;
+        border-radius: 10px;
+        height: auto;
+        padding: 10px;
+        #triangle_shape{
+            margin-top: 15px;
+                width: 0;
+                height: 0;
+                border-left: 12.5px solid transparent;
+                border-right: 12.5px solid transparent;
+                border-bottom: 25px solid $clear;            
+                    h3{
+                        margin-left: 20px;
+                        display: flex;
+                        align-items: center;
+                        @extend %h3;
+                    }
+        }
+        p{
+            margin-top: 15px;
             @extend %text;
-            font-size: 1.2rem;
-            color: $clear;
-            font-weight: bold;            
+        }
+        #checkbox{
+            margin-top: 15px;
+            width: 20px;
+            height: 20px;
+            border: none;
+            box-shadow: none;            
+        }
+        label{
+            @extend %text;
+            justify-content: center;
+        }
+        #triangleForm{
+            display: flex;
+            flex-direction: column;
+            margin-top: 15px;
+            label{
+                @extend %text;
+                color: $clear;
+            }
+            input{
+                @extend %inputs;
+                background-color: $input_secondary;
+                color: $font_color;
+                margin-bottom: 15px;
+            }
+            div{
+                margin-top: 15px;
+                button{
+                    @extend %secondary_buttons;
+                    color: $secondary;
+                }
+            }
+        }
+        #triangleResult{
+            @extend %results;            
+        }
+        #isosceles {
+            margin-top: 15px;
+            div{
+                display:flex;
+                flex-direction: column;
+          label{
+            @extend %text;
+          }
+          input{
+            @extend %inputs;
+            background-color: $input_secondary;
+            color: $font_color;
+            margin-bottom: 15px;
+          }
+        }
+          button{
+              @extend %secondary_buttons;
+          }
+          #isosceles_buttons{
+              display: block;
+          }
+          #isoscelesResult{
+            @extend %results;
+          }
+         #height_input{
+             display: block;
+             button{
+                 margin-left: 15px;
+             }
+         }
         }
     }
 }

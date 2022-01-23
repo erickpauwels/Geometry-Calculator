@@ -25,6 +25,8 @@
     }
 }
 
+//----------- Secondary buttons 
+
 %secondary_buttons{
     border-radius: 4px;
     width:fit-content;
@@ -50,9 +52,12 @@
     }
 }
 
+//------------------ Text 
+
 %text{
     font-size: 1rem;
     font-family: $roboto;
+    color: $clear;
 }
 
 %h2{
@@ -68,6 +73,8 @@
     font-size: 1.2rem;
     color: $clear;
 }
+
+//-------------- Inputs
 
 %inputs{
     margin-top: 15px;
@@ -85,4 +92,14 @@
         outline: none;
         box-shadow: none;
     }
+}
+
+//------------Results 
+
+%results {
+    margin: 15px 0px 15px 0px;
+            @extend %text;
+            font-size: 1.2rem;
+            color: $clear;
+            font-weight: bold; 
 }
