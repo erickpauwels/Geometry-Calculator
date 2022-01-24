@@ -23,7 +23,7 @@ header div button .focus_button {
   color: #fcf9f9;
 }
 
-#geometry_section #square form div button, #geometry_section #triangle #triangleForm div div button, #geometry_section #triangle #isosceles button, #geometry_section #circle form div button, #percentage_section form div button, #media_section form div button, #media_section #results_box div button {
+#geometry_section #square form div button, #geometry_section #triangle #triangleForm div div button, #geometry_section #triangle #isosceles button, #geometry_section #circle form div button, #media_section form div button, #media_section #results_box div button, #percentage_section form div button, #salaries_section form button {
   border-radius: 4px;
   width: fit-content;
   background-color: #fcf9f9;
@@ -37,25 +37,25 @@ header div button .focus_button {
   transition: .3s ease all;
 }
 
-#geometry_section #square form div button:hover, #geometry_section #triangle #triangleForm div div button:hover, #geometry_section #triangle #isosceles button:hover, #geometry_section #circle form div button:hover, #percentage_section form div button:hover, #media_section form div button:hover, #media_section #results_box div button:hover {
+#geometry_section #square form div button:hover, #geometry_section #triangle #triangleForm div div button:hover, #geometry_section #triangle #isosceles button:hover, #geometry_section #circle form div button:hover, #media_section form div button:hover, #media_section #results_box div button:hover, #percentage_section form div button:hover, #salaries_section form button:hover {
   cursor: pointer;
   background-color: #af99ff;
   color: #fcf9f9;
   box-shadow: none;
 }
 
-#geometry_section #square form div button .focus_button, #geometry_section #triangle #triangleForm div div button .focus_button, #geometry_section #triangle #isosceles button .focus_button, #geometry_section #circle form div button .focus_button, #percentage_section form div button .focus_button, #media_section form div button .focus_button, #media_section #results_box div button .focus_button {
+#geometry_section #square form div button .focus_button, #geometry_section #triangle #triangleForm div div button .focus_button, #geometry_section #triangle #isosceles button .focus_button, #geometry_section #circle form div button .focus_button, #media_section form div button .focus_button, #media_section #results_box div button .focus_button, #percentage_section form div button .focus_button, #salaries_section form button .focus_button {
   background-color: #af99ff;
   color: #fcf9f9;
 }
 
-#geometry_section #square #squareResult, #geometry_section #triangle #triangleForm #triangleResult, #geometry_section #triangle #isosceles #isoscelesResult, #geometry_section #circle #circleResult, #percentage_section form #percentage_result, header p, #geometry_section #square form label, #geometry_section #triangle p, #geometry_section #triangle label, #geometry_section #triangle #triangleForm div label, #geometry_section #triangle #isosceles div label, #geometry_section #circle p, #geometry_section #circle form label, #percentage_section form label, #media_section form p, #media_section form label, #media_section #list_values div p, #media_section #list_values #printedValues, #media_section #resultsContainer {
+#geometry_section #square #squareResult, #geometry_section #triangle #triangleForm #triangleResult, #geometry_section #triangle #isosceles #isoscelesResult, #geometry_section #circle #circleResult, #percentage_section form #percentage_result, header p, #geometry_section #square form label, #geometry_section #triangle p, #geometry_section #triangle label, #geometry_section #triangle #triangleForm div label, #geometry_section #triangle #isosceles div label, #geometry_section #circle p, #geometry_section #circle form label, #media_section form p, #media_section form label, #media_section .list_values div p, #media_section .list_values #printedValues, #media_section #resultsContainer, #percentage_section form label, #salaries_section form label, #salaries_section .list_values div p, #salaries_section .list_values #h2Value {
   font-size: 1rem;
   font-family: "Roboto", sans-serif;
   color: #fcf9f9;
 }
 
-#geometry_section h2, #percentage_section h2, #media_section h2 {
+#geometry_section h2, #media_section h2, #percentage_section h2, #salaries_section h2 {
   font-family: "Roboto", sans-serif;
   font-size: 1.5rem;
   margin-top: 15px;
@@ -69,7 +69,7 @@ header div button .focus_button {
   color: #fcf9f9;
 }
 
-#geometry_section #square form input, #geometry_section #triangle #triangleForm div input, #geometry_section #triangle #isosceles div input, #geometry_section #circle form input, #percentage_section form input, #media_section form input {
+#geometry_section #square form input, #geometry_section #triangle #triangleForm div input, #geometry_section #triangle #isosceles div input, #geometry_section #circle form input, #media_section form input, #percentage_section form input, #salaries_section form input {
   margin-top: 15px;
   border-radius: 4px;
   background: #af99ff;
@@ -83,7 +83,7 @@ header div button .focus_button {
   font-size: 1rem;
 }
 
-#geometry_section #square form input:focus, #geometry_section #triangle #triangleForm div input:focus, #geometry_section #triangle #isosceles div input:focus, #geometry_section #circle form input:focus, #percentage_section form input:focus, #media_section form input:focus {
+#geometry_section #square form input:focus, #geometry_section #triangle #triangleForm div input:focus, #geometry_section #triangle #isosceles div input:focus, #geometry_section #circle form input:focus, #media_section form input:focus, #percentage_section form input:focus, #salaries_section form input:focus {
   outline: none;
   box-shadow: none;
 }
@@ -95,7 +95,7 @@ header div button .focus_button {
   font-weight: bold;
 }
 
-#geometry_section #square, #geometry_section #triangle, #geometry_section #circle, #percentage_section form, #media_section form, #media_section #list_values, #media_section #results_box {
+#geometry_section #square, #geometry_section #triangle, #geometry_section #circle, #media_section form, #media_section .list_values, #media_section #results_box, #percentage_section form, #salaries_section form, #salaries_section .list_values {
   display: flex;
   flex-direction: column;
   margin-top: 15px;
@@ -304,46 +304,8 @@ header hr {
   margin-top: 10px;
 }
 
-#salaries_section {
-  display: none;
-}
-
-#percentage_section {
-  display: none;
-  margin: 20px;
-  margin-top: 15px;
-}
-
-#percentage_section form {
-  background: #50E3C2;
-}
-
-#percentage_section form label {
-  margin-top: 15px;
-}
-
-#percentage_section form label i {
-  margin-right: 10px;
-  font-size: 2rem;
-  color: #fcf9f9;
-}
-
-#percentage_section form input {
-  background: #a7ffec;
-  color: #414144;
-}
-
-#percentage_section form div {
-  margin-top: 15px;
-}
-
-#percentage_section form div .radio_input {
-  width: auto;
-  margin-top: 0;
-}
-
 #media_section {
-  display: block;
+  display: none;
   margin: 20px;
   margin-top: 15px;
 }
@@ -380,14 +342,14 @@ header hr {
   margin-top: 15px;
 }
 
-#media_section #list_values div {
+#media_section .list_values div {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
 }
 
-#media_section #list_values #printedValues {
+#media_section .list_values #printedValues {
   margin-top: 15px;
   font-size: 1.2rem;
   overflow-wrap: anywhere;
@@ -406,5 +368,65 @@ header hr {
 
 #media_section #resultsContainer {
   margin-top: 15px;
+}
+
+#percentage_section {
+  display: none;
+  margin: 20px;
+  margin-top: 15px;
+}
+
+#percentage_section form {
+  background: #50E3C2;
+}
+
+#percentage_section form label {
+  margin-top: 15px;
+}
+
+#percentage_section form label i {
+  margin-right: 10px;
+  font-size: 2rem;
+  color: #fcf9f9;
+}
+
+#percentage_section form input {
+  background: #a7ffec;
+  color: #414144;
+}
+
+#percentage_section form div {
+  margin-top: 15px;
+}
+
+#percentage_section form div .radio_input {
+  width: auto;
+  margin-top: 0;
+}
+
+#salaries_section {
+  display: block;
+  margin: 20px;
+  margin-top: 15px;
+}
+
+#salaries_section form label {
+  margin-top: 15px;
+}
+
+#salaries_section .list_values {
+  background: #50E3C2;
+}
+
+#salaries_section .list_values div {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#salaries_section .list_values #h2Value {
+  margin-top: 15px;
+  font-size: 1.2rem;
 }
 /*# sourceMappingURL=styles.min.css.map */

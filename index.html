@@ -115,7 +115,7 @@
                     <button type="button" onclick="resetValues()">Reset</button>
                 </div>
             </form>
-                <div id="list_values">
+                <div class="list_values">
                     <div>
                         <h3><i class="fas fa-list"></i>List</h3>
                         <p>Quantity: <span id="quantity">0</span></p>
@@ -160,7 +160,7 @@
     </div>
     <!-- Salaries Section  -->
     <div id="salaries_section">
-        <h1>Salaries</h1>
+        <h2>Salaries</h2>
         <form id="form" autocomplete="off">
             <label>Insert the name</label>
             <input type="text" id="nameSalaries" placeholder="Ex: Matheu or a place 'Spain'" required>
@@ -169,11 +169,19 @@
             <button onclick="setValues()" >Set Values</button>
             <button type="button" onclick="resetSalariesValues()">Reset</button>
         </form>
-        <h2 id="h2Value"></h2>
-        <div id="valuesSalaries">
+
+        <div class="list_values">
+            <div>
+                <h3><i class="fas fa-list"></i>List</h3>
+                <p>Quantity: <span id="quantity">0</span></p>
+            </div>
+            <span id="h2Value"></span>
         </div>
+
+        <div id="valuesSalaries"></div>
         <button type="button" id="getResultsBtn">Get Results</button>
         <div>Median of Salaries = <span id="medianResults"></span></div>
+        
         <div>
             <select name="%" id="percentage" onchange="update()">
                 <option value=""></option>

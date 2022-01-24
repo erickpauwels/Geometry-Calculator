@@ -1,5 +1,5 @@
 #media_section{
-    display: block;
+    display: none;
     margin: 20px;
     margin-top: 15px;
     h2{
@@ -38,7 +38,7 @@
             }
         }
     }
-    #list_values{
+    .list_values{
         @extend %containers;
         div{
             display: flex;
@@ -55,6 +55,7 @@
             font-size: 1.2rem;
             overflow-wrap: anywhere;
         }
+    
     }
     #results_box{
            @extend %containers;

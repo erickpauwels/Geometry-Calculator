@@ -1,3 +1,39 @@
 #salaries_section{
-    display: none;
+    display: block;
+    margin: 20px;
+    margin-top: 15px;
+    h2{
+        @extend %h2;
+    }
+    form{
+        @extend %containers;
+        label{
+            margin-top: 15px;
+            @extend %text;
+        }
+        input{
+            @extend %inputs;
+        }
+        button{
+            @extend %secondary_buttons;
+        }
+    }
+    .list_values{
+        @extend %containers;
+        background: $secondary;
+        div{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            p{
+                @extend %text;
+            }
+        }
+    #h2Value{
+        @extend %text;
+        margin-top: 15px;
+        font-size: 1.2rem;
+    }
+    }
 }
