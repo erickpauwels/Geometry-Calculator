@@ -33,8 +33,8 @@ function setValues() {
     console.log(salariesArray);
     localStorage.setItem("Array", JSON.stringify(salariesArray));
 
-    form.reset();
-    return false
+    nameSalaries.value = "";
+    numberSalaries.value = "";
 }
 
 //Get resuls BTn

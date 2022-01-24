@@ -2,13 +2,16 @@
 // Print Values 
 const list = [];
 const printValues = () =>{
+    // e.preventDefault();
     let number = Number(values.value);
     list.push(number);
     console.log(list);
+    // order elements 
+    let listInOrder = list.sort(sortOrder);
+    console.log(listInOrder);
     quantity.textContent = `${list.length}`;
-    printedValues.textContent = `${list}` ;    
-    form.reset();
-    return false;
+    printedValues.textContent = `${list}` ; 
+    values.value = "";
 };
 
 // Delete lasT value 

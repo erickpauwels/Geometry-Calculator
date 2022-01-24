@@ -72,12 +72,12 @@ const validFunction = (userPrice/* , discountCuopon */)=>{
 
 // Result Event
 
-function finalPriceFunction() {
-
+const finalPriceFunction = ()=> {
+    // e.preventDefault();
     var userPrice = Number(price.value);
     var discountValue = Number(discount.value); 
     // var discountCuopon = coupon.value.toLowerCase();
-
+    
     if (discountValue && userPrice) {
         finalPrice(userPrice,discountValue);    
     }else if (/* discountCuopon && */ userPrice){
@@ -86,13 +86,15 @@ function finalPriceFunction() {
     }else{
         userFinalPrice.innerText = "Missing data!"
     }
-
+    
 }
 
 // Reset Event 
 function resetButton() {
     // invalidCoupon.innerText = "";
     userFinalPrice.innerText = "";
+    price.value = "";
+    discount.value = "";
     // couponDisabled();
     // coupon.style.background = "#a7ffec";
 }

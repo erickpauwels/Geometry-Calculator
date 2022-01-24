@@ -106,12 +106,12 @@
     <div id="media_section">
         <h2>Mean - Media - Mode</h2>
         <form id="form">
-            <h3><i class="fas fa-calculator"></i>Values</h3>
+            <h3><i class="fas fa-poll-h"></i>Values</h3>
                 <p>Which values you want to calculate?</p>
                 <input type="number" id="values" required>     
                 <div>
-                    <button type="submit" id="submitBtn" onclick=" return printValues()">Set</button>       
-                    <button type="button" onclick="deleteValue()">Delete last one</button>
+                    <button id="submitBtn" onclick="printValues()">Set</button>       
+                    <button type="button" onclick="deleteValue()">Delete the highest</button>
                     <button type="button" onclick="resetValues()">Reset</button>
                 </div>
             </form>
@@ -124,7 +124,7 @@
                 </div>
                 <div id="results_box">
                     <div>
-                        <h3><i class="fas fa-poll-h"></i>Results</h3>
+                        <h3><i class="fas fa-calculator"></i>Results</h3>
                         <button type="button" id="resultsBtn" onclick="getResults()">Get results</button>
                     </div>
                     <div id="resultsContainer"> 
@@ -138,7 +138,6 @@
     <div id="percentage_section">
         <h2>Percentage</h2>
         <form>
-            
             <label for="price"><i class="fas fa-percentage"></i> Write your main value</label>
             <input type="number" id="price">
             <label for="discount">What percentage do you want to apply?</label>
@@ -153,8 +152,8 @@
             <!-- <input type="text" id="coupon"> -->
             <!-- <span id="invalidCoupon" ></span> -->
             <div>
-                <button type="button" onclick="finalPriceFunction()">Calculate</button>
-                <button type="reset" onclick="resetButton()">Reset</button>
+                <button onclick="finalPriceFunction()">Calculate</button>
+                <button type="button" onclick="resetButton()">Reset</button>
             </div>
             <p id="percentage_result"></p>
         </form>
@@ -167,7 +166,7 @@
             <input type="text" id="nameSalaries" placeholder="Ex: Matheu or a place 'Spain'" required>
             <label for="numberSalaries">Insert the salaries</label>
             <input type="number"  id="numberSalaries" placeholder="In numbers">
-            <button type="submit" onclick="return setValues()" >Set Values</button>
+            <button onclick="setValues()" >Set Values</button>
             <button type="button" onclick="resetSalariesValues()">Reset</button>
         </form>
         <h2 id="h2Value"></h2>
