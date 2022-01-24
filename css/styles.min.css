@@ -23,7 +23,7 @@ header div button .focus_button {
   color: #fcf9f9;
 }
 
-#geometry_section #square form div button, #geometry_section #triangle #triangleForm div div button, #geometry_section #triangle #isosceles button, #geometry_section #circle form div button {
+#geometry_section #square form div button, #geometry_section #triangle #triangleForm div div button, #geometry_section #triangle #isosceles button, #geometry_section #circle form div button, #percentage_section form div button {
   border-radius: 4px;
   width: fit-content;
   background-color: #fcf9f9;
@@ -37,25 +37,25 @@ header div button .focus_button {
   transition: .3s ease all;
 }
 
-#geometry_section #square form div button:hover, #geometry_section #triangle #triangleForm div div button:hover, #geometry_section #triangle #isosceles button:hover, #geometry_section #circle form div button:hover {
+#geometry_section #square form div button:hover, #geometry_section #triangle #triangleForm div div button:hover, #geometry_section #triangle #isosceles button:hover, #geometry_section #circle form div button:hover, #percentage_section form div button:hover {
   cursor: pointer;
   background-color: #af99ff;
   color: #fcf9f9;
   box-shadow: none;
 }
 
-#geometry_section #square form div button .focus_button, #geometry_section #triangle #triangleForm div div button .focus_button, #geometry_section #triangle #isosceles button .focus_button, #geometry_section #circle form div button .focus_button {
+#geometry_section #square form div button .focus_button, #geometry_section #triangle #triangleForm div div button .focus_button, #geometry_section #triangle #isosceles button .focus_button, #geometry_section #circle form div button .focus_button, #percentage_section form div button .focus_button {
   background-color: #af99ff;
   color: #fcf9f9;
 }
 
-#geometry_section #square #squareResult, #geometry_section #triangle #triangleForm #triangleResult, #geometry_section #triangle #isosceles #isoscelesResult, #geometry_section #circle #circleResult, header p, #geometry_section #square form label, #geometry_section #triangle p, #geometry_section #triangle label, #geometry_section #triangle #triangleForm div label, #geometry_section #triangle #isosceles div label, #geometry_section #circle p, #geometry_section #circle form label {
+#geometry_section #square #squareResult, #geometry_section #triangle #triangleForm #triangleResult, #geometry_section #triangle #isosceles #isoscelesResult, #geometry_section #circle #circleResult, header p, #geometry_section #square form label, #geometry_section #triangle p, #geometry_section #triangle label, #geometry_section #triangle #triangleForm div label, #geometry_section #triangle #isosceles div label, #geometry_section #circle p, #geometry_section #circle form label, #percentage_section form label {
   font-size: 1rem;
   font-family: "Roboto", sans-serif;
   color: #fcf9f9;
 }
 
-#geometry_section h2 {
+#geometry_section h2, #percentage_section h2 {
   font-family: "Roboto", sans-serif;
   font-size: 1.5rem;
   margin-top: 15px;
@@ -69,7 +69,7 @@ header div button .focus_button {
   color: #fcf9f9;
 }
 
-#geometry_section #square form input, #geometry_section #triangle #triangleForm div input, #geometry_section #triangle #isosceles div input, #geometry_section #circle form input {
+#geometry_section #square form input, #geometry_section #triangle #triangleForm div input, #geometry_section #triangle #isosceles div input, #geometry_section #circle form input, #percentage_section form input {
   margin-top: 15px;
   border-radius: 4px;
   background: #af99ff;
@@ -83,7 +83,7 @@ header div button .focus_button {
   font-size: 1rem;
 }
 
-#geometry_section #square form input:focus, #geometry_section #triangle #triangleForm div input:focus, #geometry_section #triangle #isosceles div input:focus, #geometry_section #circle form input:focus {
+#geometry_section #square form input:focus, #geometry_section #triangle #triangleForm div input:focus, #geometry_section #triangle #isosceles div input:focus, #geometry_section #circle form input:focus, #percentage_section form input:focus {
   outline: none;
   box-shadow: none;
 }
@@ -319,7 +319,37 @@ header hr {
 }
 
 #percentage_section {
-  display: none;
+  display: block;
+  margin: 20px;
+  margin-top: 15px;
+}
+
+#percentage_section form {
+  display: flex;
+  flex-direction: column;
+  margin-top: 15px;
+  background: #50E3C2;
+  border-radius: 10px;
+  height: auto;
+  padding: 10px;
+}
+
+#percentage_section form label {
+  margin-top: 15px;
+}
+
+#percentage_section form input {
+  background: #a7ffec;
+  color: #414144;
+}
+
+#percentage_section form div {
+  margin-top: 15px;
+}
+
+#percentage_section form div .radio_input {
+  width: auto;
+  margin-top: 0;
 }
 
 #media_section {

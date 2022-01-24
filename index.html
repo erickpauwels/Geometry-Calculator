@@ -123,19 +123,26 @@
     </div>
     <!-- Percentage Section  -->
     <div id="percentage_section">
-        <h1>Percentage & Discounts</h1>
+        <h2>Percentage</h2>
         <form>
-            <label for="price">Write the price of your product</label>
+            
+            <label for="price"><i class="fas fa-percentage"></i> Write your main value</label>
             <input type="number" id="price">
-            <label for="discount">How much is the discount in %web?</label>
+            <label for="discount">What percentage do you want to apply?</label>
             <input type="number" id="discount">
-            <label for="coupon">Do you have a discount coupon?</label>
-            <input type="radio"  id="yes" name="option" onclick="couponAble()">Yes
-            <input type="radio"  id="no" name="option" onclick="couponDisabled()">No
-            <input type="text" id="coupon">
-            <span id="invalidCoupon" ></span>
-            <button type="button" onclick="finalPriceFunction()">Calculate</button>
-            <button type="reset" onclick="resetButton()">Reset</button>
+            <!-- <label for="coupon">Do you have a discount coupon?</label> -->
+          <!--   <div>
+                <input type="radio"  class="radio_input" id="yes" name="option" onclick="couponAble()">
+                <label for="option">Yes</label>
+                <input type="radio" class="radio_input" id="no" name="option" onclick="couponDisabled()">
+                <label for="option">No</label>
+            </div> -->
+            <!-- <input type="text" id="coupon"> -->
+            <!-- <span id="invalidCoupon" ></span> -->
+            <div>
+                <button type="button" onclick="finalPriceFunction()">Calculate</button>
+                <button type="reset" onclick="resetButton()">Reset</button>
+            </div>
         </form>
         <p id="result"></p>
     </div>
