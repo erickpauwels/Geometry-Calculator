@@ -11,7 +11,7 @@ function update (){
 // Constructor
 function sal (name, salarie){
     this.name = name,
-    this.salarie =salarie
+    this.salarie = salarie
 }
   
 
@@ -74,6 +74,9 @@ const resetSalariesValues = () =>{
     valuesSalaries.innerText = "";
     quantityPrices.textContent = "0";
     localStorage.clear();
+    totalPriceSpan.innerHTML = "";
+    medianResults.innerHTML = "";
+    location.reload();
 }
 
 
