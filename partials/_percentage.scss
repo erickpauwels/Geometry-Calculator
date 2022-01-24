@@ -1,19 +1,19 @@
 #percentage_section{
-    display: block;
+    display: none;
     margin: 20px;
     margin-top: 15px;
     h2{
         @extend %h2;
     }
     form{
-        display: flex;
-        flex-direction: column;
-        margin-top: 15px;
+        @extend %containers;
         background: $secondary;
-        border-radius: 10px;
-        height: auto;
-        padding: 10px;
         label{
+            i{
+                margin-right: 10px;
+                font-size: 2rem;
+                color: $clear;
+            }
             margin-top: 15px;
             @extend %text;
         }
@@ -31,6 +31,9 @@
             button{
                 @extend %secondary_buttons;
             }
+        }
+        #percentage_result{
+            @extend %results;
         }
     }
 }

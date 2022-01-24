@@ -37,7 +37,7 @@ const circleResult = document.getElementById("circleResult");
 const price = document.getElementById("price");
 const discount = document.getElementById("discount");
 const coupon = document.getElementById("coupon");
-const userFinalPrice = document.getElementById("result");
+const userFinalPrice = document.getElementById("percentage_result");
 const invalidCoupon = document.getElementById("invalidCoupon");
 
 
@@ -49,7 +49,7 @@ const modeSpan = document.getElementById("mode");
 const printedValues = document.getElementById("printedValues");
 const resultsContainer = document.getElementById("resultsContainer");
 const values = document.getElementById("values");
-
+const quantity = document.getElementById("quantity");
 /*--------------------------- SALARIES-------------------------- */
 
 const nameSalaries = document.getElementById("nameSalaries");

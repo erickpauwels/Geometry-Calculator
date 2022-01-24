@@ -1,3 +1,76 @@
 #media_section{
-    display: none;
+    display: block;
+    margin: 20px;
+    margin-top: 15px;
+    h2{
+        @extend %h2;
+    }
+    h3{
+        @extend %h3;
+        display: flex;
+        align-items: center;
+        i{
+            margin-right: 10px;
+            font-size: 2rem;
+            color: $clear;
+        }
+    }
+    form{
+        @extend %containers;
+        background: $secondary;
+        p {
+            margin-top: 15px;
+            @extend %text;
+        }
+        label{
+            margin-top: 15px;
+            @extend %text;
+        }
+        input{
+            @extend %inputs;
+            background: $input_secondary;
+            color: $font_color;
+        }
+        div{
+            margin-top: 15px;
+            button{
+                @extend %secondary_buttons;
+            }
+        }
+    }
+    #list_values{
+        @extend %containers;
+        div{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            p{
+                @extend %text;
+            }
+        }
+        #printedValues{
+            @extend %text;
+            margin-top: 15px;
+            font-size: 1.2rem;
+            overflow-wrap: anywhere;
+        }
+    }
+    #results_box{
+           @extend %containers;
+           background: $secondary;
+           div{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            button{
+               @extend %secondary_buttons;
+           }
+        }
+    }
+    #resultsContainer{
+        @extend %text;
+        margin-top: 15px;
+    }
 }

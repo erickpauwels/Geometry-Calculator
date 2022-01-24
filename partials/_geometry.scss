@@ -6,11 +6,7 @@
         @extend %h2;
     }
     #square{
-        margin-top: 15px;
-        background-color:$main;
-        border-radius: 10px;
-        height: auto;
-        padding: 10px;
+        @extend %containers;
         h3{
             display: flex;
             align-items: center;
@@ -43,11 +39,8 @@
         }
     }
     #triangle{
-        margin-top: 15px;
-        background-color:$secondary;
-        border-radius: 10px;
-        height: auto;
-        padding: 10px;
+        @extend %containers;
+        background: $secondary;
         #triangle_shape{
             margin-top: 15px;
                 width: 0;
@@ -138,11 +131,7 @@
         }
     }
     #circle{
-        margin-top: 15px;
-        background-color:$main;
-        border-radius: 10px;
-        height: auto;
-        padding: 10px;
+        @extend %containers;
         h3{
             display: flex;
             align-items: center;

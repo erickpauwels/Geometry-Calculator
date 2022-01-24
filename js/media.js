@@ -5,7 +5,8 @@ const printValues = () =>{
     let number = Number(values.value);
     list.push(number);
     console.log(list);
-    printedValues.textContent = `${list}`;    
+    quantity.textContent = `${list.length}`;
+    printedValues.textContent = `${list}` ;    
     form.reset();
     return false;
 };
@@ -14,8 +15,9 @@ const printValues = () =>{
 const deleteValue = () =>{
     list.pop();  
     printedValues.textContent = list;
+    quantity.textContent = `${list.length}`;
     if (list.length<1) {
-        printedValues.textContent = "NO MORE VALUES TO DELETE";
+        printedValues.textContent = "Missing Data!";
         resultsContainer.style.display = "none"
     }
 }
@@ -24,7 +26,8 @@ const deleteValue = () =>{
 const resetValues = () =>{
     list.splice(0, list.length);
     resultsContainer.style.display = "none"
-    printedValues.textContent = `Values DELETED`; 
+    printedValues.textContent = `Values Deleted!`;
+    quantity.textContent = `${list.length}`; 
 }
 
 //---------------- MEAN - with .reduce - function in helpers.js --------------------//
@@ -88,7 +91,5 @@ const getResults = () =>{
     // mean function in helpers.js
     meanSpan.textContent= `Mean: ${mean(list)}`
     modeSpan.textContent= `Mode: ${mode(list)}`;
-    medianSpan.innerHTML = `
-        Median: ${median(list)}
-        <br><span> Quantity of values: ${list.length}</span>`;;
+    medianSpan.innerHTML = `Median: ${median(list)}`;;
 }

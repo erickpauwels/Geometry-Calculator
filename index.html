@@ -104,21 +104,34 @@
     </div>
     <!-- Media Section  -->
     <div id="media_section">
-            <h1>Mean - Media - Mode</h1>
-            <form id="form">
-                <p>Introduce the values you want to calculate</p>
+        <h2>Mean - Media - Mode</h2>
+        <form id="form">
+            <h3><i class="fas fa-calculator"></i>Values</h3>
+                <p>Which values you want to calculate?</p>
                 <input type="number" id="values" required>     
-                <button type="submit" id="submitBtn" onclick=" return printValues()">Set</button>       
-                <button type="button" onclick="resetValues()">Reset</button>
-                <button type="button" onclick="deleteValue()">Delete last value</button>
+                <div>
+                    <button type="submit" id="submitBtn" onclick=" return printValues()">Set</button>       
+                    <button type="button" onclick="deleteValue()">Delete last one</button>
+                    <button type="button" onclick="resetValues()">Reset</button>
+                </div>
             </form>
-                <br>
-                <div>Values:<span id="printedValues"></span></div>
-                <button type="button" id="resultsBtn" onclick="getResults()">Get results</button>
-                <div id="resultsContainer"> 
-                    <span id="mean">Mean:</span><br>
-                    <span id="mode">Mode:</span><br>
-                    <span id="median">Median:</span>
+                <div id="list_values">
+                    <div>
+                        <h3><i class="fas fa-list"></i>List</h3>
+                        <p>Quantity: <span id="quantity">0</span></p>
+                    </div>
+                    <span id="printedValues"></span>
+                </div>
+                <div id="results_box">
+                    <div>
+                        <h3><i class="fas fa-poll-h"></i>Results</h3>
+                        <button type="button" id="resultsBtn" onclick="getResults()">Get results</button>
+                    </div>
+                    <div id="resultsContainer"> 
+                        <span id="mean">Mean = </span><br>
+                        <span id="mode">Mode = </span><br>
+                        <span id="median">Median = </span>
+                    </div>
                 </div>
     </div>
     <!-- Percentage Section  -->
@@ -143,8 +156,8 @@
                 <button type="button" onclick="finalPriceFunction()">Calculate</button>
                 <button type="reset" onclick="resetButton()">Reset</button>
             </div>
+            <p id="percentage_result"></p>
         </form>
-        <p id="result"></p>
     </div>
     <!-- Salaries Section  -->
     <div id="salaries_section">

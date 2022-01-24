@@ -36,10 +36,16 @@ const coupons = [
 const  finalPrice = (userPrice, discountValue) => {
     var percentageDecimal = (discountValue/100);
     var percentageDiscount = 100 - discountValue;
-    let userFinal = (userPrice * percentageDiscount)/100;
     let percentage = userPrice * percentageDecimal;
-    userFinalPrice.innerText = `If you rest the % = ${(userFinal)}
-    Value in % = ${percentage} `;
+    let addedPrice = userPrice + percentage;
+    let userFinal = (userPrice * percentageDiscount)/100;
+   
+    userFinalPrice.innerText = `
+    ${discountValue}% of ${userPrice} = ${percentage} 
+    Subtracted = ${(userFinal)}
+    Added = ${addedPrice}
+    `;
+
     if (discountValue == 100) {
         userFinalPrice.innerText = "Great Deal!";
     }

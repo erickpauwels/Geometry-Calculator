@@ -103,3 +103,15 @@
             color: $clear;
             font-weight: bold; 
 }
+
+// ------------Containers
+
+%containers{
+    display: flex;
+    flex-direction: column;
+    margin-top: 15px;
+    background: $main;
+    border-radius: 10px;
+    height: auto;
+    padding: 10px;
+}
