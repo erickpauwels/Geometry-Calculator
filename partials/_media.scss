@@ -32,8 +32,9 @@
             color: $font_color;
         }
         div{
-            margin-top: 15px;
+            margin-top: 5px;
             button{
+                margin-top: 10px;
                 @extend %secondary_buttons;
             }
         }

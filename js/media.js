@@ -92,7 +92,7 @@ resultsContainer.style.display = "none";
 const getResults = () =>{
     list.length<1 ? resultsContainer.style.display = "none":resultsContainer.style.display = "block";
     // mean function in helpers.js
-    meanSpan.textContent= `Mean: ${mean(list)}`
+    meanSpan.textContent= `Mean: ${mean(list).toFixed(2)}`
     modeSpan.textContent= `Mode: ${mode(list)}`;
     medianSpan.innerHTML = `Median: ${median(list)}`;;
 }

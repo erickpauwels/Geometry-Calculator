@@ -20,13 +20,16 @@ function sal (name, salarie){
 function setValues() {
     let finalObject = new sal(nameSalaries.value,Number(numberSalaries.value));
     salaries.push(finalObject);
-    h2Value.innerHTML = "Values";
+    // h2Value.innerHTML = "Values";
     //Print Values
     const p1 = document.createElement('p');
     salaries.forEach(e => {
-       p1.innerHTML = `Name: ${e.name} Salarie: ${e.salarie}`
+       p1.innerHTML = `<i class="far fa-dot-circle"></i> ${e.name} - $${e.salarie}`
        valuesSalaries.appendChild(p1);
     });
+
+    //Quantity
+    quantityPrices.textContent = `${salaries.length}`;
 
     //.MAP & .SORT methods
     const salariesArray = salaries.map((numbers) => numbers.salarie).sort((a,b) =>a-b);
@@ -42,6 +45,10 @@ getResultsBtn.addEventListener('click', ()=>{
 
     let salariesArray = JSON.parse(localStorage.getItem("Array"));
     console.log(salariesArray);
+
+    // Final PRICE 
+    totalPriceSpan.innerHTML = totalPrice(salariesArray);
+
     //Median Salaries Function
     medianSalaries(salariesArray);
     console.log(`Median Salaries: ${medianSalaries(salariesArray)}`);
@@ -63,9 +70,19 @@ getResultsBtn.addEventListener('click', ()=>{
 
 //Reset Values
 const resetSalariesValues = () =>{
-    h2Value.innerHTML = "Values Deleted";
+    // h2Value.innerHTML = "Values Deleted";
     valuesSalaries.innerText = "";
+    quantityPrices.textContent = "0";
     localStorage.clear();
+}
+
+
+//-----------------TOTAL------------------------//
+
+const totalPrice = (array) => {
+    const acumulatePrice = (acumulate, position) => acumulate + position;
+    let finalPrice = array.reduce(acumulatePrice,0);
+    return finalPrice;
 }
 
 //----------------- MEDIAN SALARIES WIth .MAP - .SORT - .REDUCE -------------------//

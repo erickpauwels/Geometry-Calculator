@@ -19,9 +19,9 @@
         <p>what do you want to calculate today?</p>
         <div>
               <button type="button" onclick="geoSection()">Geometry</button>
-              <button type="button" onclick="meSection()">Media</button>
+              <button type="button" onclick="meSection()">Mean</button>
               <button type="button" onclick="peSection()">Percentage</button>
-              <button type="button" onclick="saSection()">Salaries</button>
+              <button type="button" onclick="saSection()">Prices</button>
         </div>
         <hr>
     </header>
@@ -104,7 +104,7 @@
     </div>
     <!-- Media Section  -->
     <div id="media_section">
-        <h2>Mean - Media - Mode</h2>
+        <h2>Mean - Median - Mode</h2>
         <form id="form">
             <h3><i class="fas fa-poll-h"></i>Values</h3>
                 <p>Which values you want to calculate?</p>
@@ -142,6 +142,11 @@
             <input type="number" id="price">
             <label for="discount">What percentage do you want to apply?</label>
             <input type="number" id="discount">
+            <div>
+                <button type="button" onclick="finalPriceFunction()">Calculate</button>
+                <button type="button" onclick="resetButton()">Reset</button>
+            </div>
+            <p id="percentage_result"></p>
             <!-- <label for="coupon">Do you have a discount coupon?</label> -->
           <!--   <div>
                 <input type="radio"  class="radio_input" id="yes" name="option" onclick="couponAble()">
@@ -151,53 +156,54 @@
             </div> -->
             <!-- <input type="text" id="coupon"> -->
             <!-- <span id="invalidCoupon" ></span> -->
-            <div>
-                <button onclick="finalPriceFunction()">Calculate</button>
-                <button type="button" onclick="resetButton()">Reset</button>
-            </div>
-            <p id="percentage_result"></p>
         </form>
     </div>
     <!-- Salaries Section  -->
     <div id="salaries_section">
-        <h2>Salaries</h2>
+        <h2>Prices</h2>
         <form id="form" autocomplete="off">
-            <label>Insert the name</label>
-            <input type="text" id="nameSalaries" placeholder="Ex: Matheu or a place 'Spain'" required>
-            <label for="numberSalaries">Insert the salaries</label>
-            <input type="number"  id="numberSalaries" placeholder="In numbers">
-            <button onclick="setValues()" >Set Values</button>
-            <button type="button" onclick="resetSalariesValues()">Reset</button>
+            <label>Insert the product or service</label>
+            <input type="text" id="nameSalaries" required>
+            <label for="numberSalaries">What is the price?</label>
+            <input type="number"  id="numberSalaries" >
+            <div>
+                <button onclick="setValues()" >Set Values</button>
+                <button type="button" onclick="resetSalariesValues()">Reset</button>
+            </div>
         </form>
 
         <div class="list_values">
             <div>
-                <h3><i class="fas fa-list"></i>List</h3>
-                <p>Quantity: <span id="quantity">0</span></p>
+                <h3><i class="fas fa-list"></i> List</h3>
+                <p>Quantity: <span id="quantityPrices">0</span></p>
             </div>
-            <span id="h2Value"></span>
+            <div id="valuesSalaries"></div>
         </div>
-
-        <div id="valuesSalaries"></div>
-        <button type="button" id="getResultsBtn">Get Results</button>
-        <div>Median of Salaries = <span id="medianResults"></span></div>
-        
-        <div>
-            <select name="%" id="percentage" onchange="update()">
-                <option value=""></option>
-                <option value="90">10%</option>
-                <option value="75">25%</option>
-                <option value="50">50%</option>
-            </select>
-             Top Salaries =
-            <span id="topPercentage"></span>
-        </div>
-        <div>Median Top Salaries =
-            <span id="topMedian"></span>
-        </div>
-    </div>
+        <div id="pricesResults">
+                <div id="price_results_header">
+                    <h3><i class="fas fa-dollar-sign"></i>Results</h3>
+                    <button type="button" id="getResultsBtn">Get Results</button>
+                </div> 
+                <div>Final price = <span id="totalPrice"></span></div>
+                <div>Median of prices = <span id="medianResults"></span></div>
+                <div>
+                    <select name="%" id="percentage" onchange="update()">
+                        <option value=""></option>
+                        <option value="90">10%</option>
+                        <option value="75">25%</option>
+                        <option value="50">50%</option>
+                    </select>
+                    Top Prices =
+                    <span id="topPercentage"></span>
+                </div>
+                <div>Median Top Prices =
+                    <span id="topMedian"></span>
+                </div>
+            </div>
+        </div>    
     <footer>    
-        Developed by Erick Pauwels
+        <p>Developed by Erick Pauwels &#169 2022</p>
+        <p>All rights reserved</p>
     </footer>
     <script src="js/main.js"></script>
     <script src="js/variables.js"></script>

@@ -1,0 +1,9 @@
+footer {
+    margin: 15px;
+    @extend %text;
+    color: $font_color;
+    text-align: center;
+    p  {
+        margin-top:10px ;
+    }
+}

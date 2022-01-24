@@ -23,7 +23,7 @@ header div button .focus_button {
   color: #fcf9f9;
 }
 
-#geometry_section #square form div button, #geometry_section #triangle #triangleForm div div button, #geometry_section #triangle #isosceles button, #geometry_section #circle form div button, #media_section form div button, #media_section #results_box div button, #percentage_section form div button, #salaries_section form button {
+#geometry_section #square form div button, #geometry_section #triangle #triangleForm div div button, #geometry_section #triangle #isosceles button, #geometry_section #circle form div button, #media_section form div button, #media_section #results_box div button, #percentage_section form div button, #salaries_section form div button, #salaries_section #pricesResults #price_results_header button {
   border-radius: 4px;
   width: fit-content;
   background-color: #fcf9f9;
@@ -37,19 +37,19 @@ header div button .focus_button {
   transition: .3s ease all;
 }
 
-#geometry_section #square form div button:hover, #geometry_section #triangle #triangleForm div div button:hover, #geometry_section #triangle #isosceles button:hover, #geometry_section #circle form div button:hover, #media_section form div button:hover, #media_section #results_box div button:hover, #percentage_section form div button:hover, #salaries_section form button:hover {
+#geometry_section #square form div button:hover, #geometry_section #triangle #triangleForm div div button:hover, #geometry_section #triangle #isosceles button:hover, #geometry_section #circle form div button:hover, #media_section form div button:hover, #media_section #results_box div button:hover, #percentage_section form div button:hover, #salaries_section form div button:hover, #salaries_section #pricesResults #price_results_header button:hover {
   cursor: pointer;
   background-color: #af99ff;
   color: #fcf9f9;
   box-shadow: none;
 }
 
-#geometry_section #square form div button .focus_button, #geometry_section #triangle #triangleForm div div button .focus_button, #geometry_section #triangle #isosceles button .focus_button, #geometry_section #circle form div button .focus_button, #media_section form div button .focus_button, #media_section #results_box div button .focus_button, #percentage_section form div button .focus_button, #salaries_section form button .focus_button {
+#geometry_section #square form div button .focus_button, #geometry_section #triangle #triangleForm div div button .focus_button, #geometry_section #triangle #isosceles button .focus_button, #geometry_section #circle form div button .focus_button, #media_section form div button .focus_button, #media_section #results_box div button .focus_button, #percentage_section form div button .focus_button, #salaries_section form div button .focus_button, #salaries_section #pricesResults #price_results_header button .focus_button {
   background-color: #af99ff;
   color: #fcf9f9;
 }
 
-#geometry_section #square #squareResult, #geometry_section #triangle #triangleForm #triangleResult, #geometry_section #triangle #isosceles #isoscelesResult, #geometry_section #circle #circleResult, #percentage_section form #percentage_result, header p, #geometry_section #square form label, #geometry_section #triangle p, #geometry_section #triangle label, #geometry_section #triangle #triangleForm div label, #geometry_section #triangle #isosceles div label, #geometry_section #circle p, #geometry_section #circle form label, #media_section form p, #media_section form label, #media_section .list_values div p, #media_section .list_values #printedValues, #media_section #resultsContainer, #percentage_section form label, #salaries_section form label, #salaries_section .list_values div p, #salaries_section .list_values #h2Value {
+#geometry_section #square #squareResult, #geometry_section #triangle #triangleForm #triangleResult, #geometry_section #triangle #isosceles #isoscelesResult, #geometry_section #circle #circleResult, #percentage_section form #percentage_result, header p, #geometry_section #square form label, #geometry_section #triangle p, #geometry_section #triangle label, #geometry_section #triangle #triangleForm div label, #geometry_section #triangle #isosceles div label, #geometry_section #circle p, #geometry_section #circle form label, #media_section form p, #media_section form label, #media_section .list_values div p, #media_section .list_values #printedValues, #media_section #resultsContainer, #percentage_section form label, #salaries_section form label, #salaries_section .list_values div p, #salaries_section .list_values #valuesSalaries, #salaries_section #pricesResults div, footer {
   font-size: 1rem;
   font-family: "Roboto", sans-serif;
   color: #fcf9f9;
@@ -63,7 +63,7 @@ header div button .focus_button {
   line-height: 30px;
 }
 
-#geometry_section #square h3, #geometry_section #triangle #triangle_shape h3, #geometry_section #circle h3, #media_section h3 {
+#geometry_section #square h3, #geometry_section #triangle #triangle_shape h3, #geometry_section #circle h3, #media_section h3, #salaries_section h3 {
   font-family: "Roboto", sans-serif;
   font-size: 1.2rem;
   color: #fcf9f9;
@@ -95,7 +95,7 @@ header div button .focus_button {
   font-weight: bold;
 }
 
-#geometry_section #square, #geometry_section #triangle, #geometry_section #circle, #media_section form, #media_section .list_values, #media_section #results_box, #percentage_section form, #salaries_section form, #salaries_section .list_values {
+#geometry_section #square, #geometry_section #triangle, #geometry_section #circle, #media_section form, #media_section .list_values, #media_section #results_box, #percentage_section form, #salaries_section form, #salaries_section .list_values, #salaries_section #pricesResults {
   display: flex;
   flex-direction: column;
   margin-top: 15px;
@@ -110,6 +110,13 @@ header div button .focus_button {
   padding: 0;
   box-sizing: border-box;
   text-decoration: none;
+}
+
+* hr {
+  width: 80%;
+  margin: 0 auto;
+  margin-top: 15px;
+  opacity: 50%;
 }
 
 header {
@@ -158,12 +165,6 @@ header div {
   display: flex;
   flex-flow: wrap;
   justify-content: center;
-}
-
-header hr {
-  width: 80%;
-  margin: 0 auto;
-  margin-top: 15px;
 }
 
 #geometry_section {
@@ -339,7 +340,11 @@ header hr {
 }
 
 #media_section form div {
-  margin-top: 15px;
+  margin-top: 5px;
+}
+
+#media_section form div button {
+  margin-top: 10px;
 }
 
 #media_section .list_values div {
@@ -405,12 +410,27 @@ header hr {
 }
 
 #salaries_section {
-  display: block;
+  display: none;
   margin: 20px;
   margin-top: 15px;
 }
 
+#salaries_section h3 {
+  display: flex;
+  align-items: center;
+}
+
+#salaries_section h3 i {
+  margin-right: 10px;
+  font-size: 2rem;
+  color: #fcf9f9;
+}
+
 #salaries_section form label {
+  margin-top: 15px;
+}
+
+#salaries_section form div {
   margin-top: 15px;
 }
 
@@ -425,8 +445,34 @@ header hr {
   align-items: center;
 }
 
-#salaries_section .list_values #h2Value {
+#salaries_section .list_values #valuesSalaries {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
   margin-top: 15px;
-  font-size: 1.2rem;
+  font-size: 1rem;
+}
+
+#salaries_section .list_values #valuesSalaries i {
+  font-size: 0.8rem;
+}
+
+#salaries_section #pricesResults #price_results_header {
+  display: flex;
+  justify-content: space-between;
+}
+
+#salaries_section #pricesResults div {
+  margin-top: 10px;
+}
+
+footer {
+  margin: 15px;
+  color: #414144;
+  text-align: center;
+}
+
+footer p {
+  margin-top: 10px;
 }
 /*# sourceMappingURL=styles.min.css.map */

@@ -3,6 +3,12 @@
     padding: 0;
     box-sizing: border-box;
     text-decoration: none;
+    hr {
+        width: 80%;
+        margin: 0 auto;
+        margin-top: 15px;
+        opacity: 50%;    
+    }
 }
 
 header {
@@ -48,10 +54,4 @@ header {
             @extend %button;
             }
     }
-    hr {
-        width: 80%;
-        margin: 0 auto;
-        margin-top: 15px;
-    }
-
-}
+   }

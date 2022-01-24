@@ -50,7 +50,7 @@ const printedValues = document.getElementById("printedValues");
 const resultsContainer = document.getElementById("resultsContainer");
 const values = document.getElementById("values");
 const quantity = document.getElementById("quantity");
-/*--------------------------- SALARIES-------------------------- */
+/*--------------------------- PRICES -------------------------- */
 
 const nameSalaries = document.getElementById("nameSalaries");
 const numberSalaries = document.getElementById("numberSalaries");
@@ -61,4 +61,5 @@ const e = document.getElementById("percentage");
 const h2Value = document.getElementById("h2Value");
 const topPercentage = document.getElementById("topPercentage");
 const topMedian = document.getElementById("topMedian");
-
+const totalPriceSpan = document.getElementById("totalPrice");
+const quantityPrices = document.getElementById("quantityPrices");

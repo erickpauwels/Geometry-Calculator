@@ -1,9 +1,19 @@
 #salaries_section{
-    display: block;
+    display: none;
     margin: 20px;
     margin-top: 15px;
     h2{
         @extend %h2;
+    }
+    h3{
+        @extend %h3;
+        display: flex;
+        align-items: center;
+        i{
+            margin-right: 10px;
+            font-size: 2rem;
+            color: $clear;
+        }
     }
     form{
         @extend %containers;
@@ -14,9 +24,12 @@
         input{
             @extend %inputs;
         }
+        div{
+            margin-top: 15px;
         button{
             @extend %secondary_buttons;
         }
+    }
     }
     .list_values{
         @extend %containers;
@@ -30,10 +43,30 @@
                 @extend %text;
             }
         }
-    #h2Value{
+    #valuesSalaries{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
         @extend %text;
         margin-top: 15px;
-        font-size: 1.2rem;
+        font-size: 1rem;
+        i{
+            font-size: 0.8rem;
+        }
     }
+    }
+    #pricesResults{
+        @extend %containers;
+        #price_results_header{
+            display: flex;
+            justify-content: space-between;
+            button{
+                @extend %secondary_buttons;
+            }
+         }
+         div{
+             margin-top: 10px;
+             @extend %text;
+         }
     }
 }
